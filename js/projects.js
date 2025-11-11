@@ -2,15 +2,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const projectsContainer = document.getElementById('projects-container');
     
-    // Array of project folders (you'll need to update this based on your actual projects)
     const projectFolders = [
-        '01-Azure_CloudOps',
-        '02-taxi_fare_analysis', 
-        '03-eiffage_bmi_revit',
-        '04-CloudOps_Automation',
-        '05-jsi_council_forecast',
-        '06-Monitoring_Workbooks',
-        '10-Training_Tutoring'
+        '01-azure-cloudops',
+        '02-taxi-fare-analysis', 
+        '03-eiffage-bim-revit',
+        '04-cloudops-automation',
+        '05-jsi-council-forecast',
+        '06-monitoring-workbooks',
+        '10-training-tutoring'
     ];
 
     let loadedProjects = 0;
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.json();
             })
             .then(projectData => {
-                // Try to load the image
                 const imagePath = `projects/${folder}/${projectData.image || 'preview.png'}`;
                 
                 const projectCard = document.createElement('div');
@@ -33,12 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 projectCard.innerHTML = `
                     <div class="project-image">
                         <img src="${imagePath}" alt="${projectData.title}" 
-                             onerror="this.src='assets/placeholder.png'">
+                             onerror="this.src='../../assets/placeholder.png'">
                     </div>
                     <div class="project-content">
                         <h3>${projectData.title}</h3>
-                        <p class="project-summary">${projectData.summary || 'No description available.'}</p>
-                        <a href="projects-pages/${projectData.slug || folder}.html" class="project-link">
+                        <p class="project-summary">${projectData.summary}</p>
+                        <a href="projects/${folder}/" class="project-link">
                             🔍 View Full Project
                         </a>
                     </div>
@@ -47,12 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 projectsContainer.appendChild(projectCard);
                 loadedProjects++;
                 
-                // Remove loading message when all projects are loaded
                 if (loadedProjects === totalProjects) {
                     const loadingElement = projectsContainer.querySelector('.loading');
-                    if (loadingElement) {
-                        loadingElement.remove();
-                    }
+                    if (loadingElement) loadingElement.remove();
                 }
             })
             .catch(error => {
