@@ -1,0 +1,8 @@
+{
+  "title": "Taxi Fare Analysis",
+  "slug": "02-taxi_fare_analysis",
+  "summary": "Dynamic fare prediction using geolocation and time-based pricing logic.",
+  "description": "<<< full rich markdown >>>",
+  "image": "streamlit_dash.png",
+  "link": "https://github.com/Psykali/taxifare-website.git"
+}
