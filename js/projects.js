@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectsContainer = document.getElementById('projects-container');
     
     const projectFolders = [
-        '01-azure-cloudops',
+        '01-Azure_CloudOps',
         '02-taxi-fare-analysis', 
         '03-eiffage-bim-revit',
         '04-cloudops-automation',
