@@ -1,0 +1,67 @@
+// Load projects from JSON files
+document.addEventListener('DOMContentLoaded', function() {
+    const projectsContainer = document.getElementById('projects-container');
+    
+    // Array of project folders (you'll need to update this based on your actual projects)
+    const projectFolders = [
+        '01-Azure_CloudOps',
+        '02-taxi_fare_analysis', 
+        '03-eiffage_bmi_revit',
+        '04-CloudOps_Automation',
+        '05-jsi_council_forecast',
+        '06-Monitoring_Workbooks',
+        '10-Training_Tutoring'
+    ];
+
+    let loadedProjects = 0;
+    const totalProjects = projectFolders.length;
+
+    projectsContainer.innerHTML = '<div class="loading">Loading projects...</div>';
+
+    projectFolders.forEach(folder => {
+        fetch(`projects/${folder}/info.json`)
+            .then(response => {
+                if (!response.ok) throw new Error('Project not found');
+                return response.json();
+            })
+            .then(projectData => {
+                // Try to load the image
+                const imagePath = `projects/${folder}/${projectData.image || 'preview.png'}`;
+                
+                const projectCard = document.createElement('div');
+                projectCard.className = 'project-card';
+                projectCard.innerHTML = `
+                    <div class="project-image">
+                        <img src="${imagePath}" alt="${projectData.title}" 
+                             onerror="this.src='assets/placeholder.png'">
+                    </div>
+                    <div class="project-content">
+                        <h3>${projectData.title}</h3>
+                        <p class="project-summary">${projectData.summary || 'No description available.'}</p>
+                        <a href="projects-pages/${projectData.slug || folder}.html" class="project-link">
+                            🔍 View Full Project
+                        </a>
+                    </div>
+                `;
+                
+                projectsContainer.appendChild(projectCard);
+                loadedProjects++;
+                
+                // Remove loading message when all projects are loaded
+                if (loadedProjects === totalProjects) {
+                    const loadingElement = projectsContainer.querySelector('.loading');
+                    if (loadingElement) {
+                        loadingElement.remove();
+                    }
+                }
+            })
+            .catch(error => {
+                console.error(`Error loading project ${folder}:`, error);
+                loadedProjects++;
+                
+                if (loadedProjects === totalProjects && projectsContainer.children.length === 1) {
+                    projectsContainer.innerHTML = '<div class="loading">No projects found.</div>';
+                }
+            });
+    });
+});
