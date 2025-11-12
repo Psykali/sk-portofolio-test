@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', async function() {
         // Load each project
         const projectsData = [];
         
+        // Check if running locally with file:// protocol
+        const isLocalFile = window.location.protocol === 'file:';
+        
         for (const projectFolder of projects) {
             try {
                 const response = await fetch(`projects/${projectFolder}/info.json`);
@@ -29,9 +32,29 @@ document.addEventListener('DOMContentLoaded', async function() {
                     const data = await response.json();
                     data.folder = projectFolder;
                     projectsData.push(data);
+                } else {
+                    console.warn(`Could not load project: ${projectFolder} (Status: ${response.status})`);
                 }
             } catch (error) {
                 console.warn(`Could not load project: ${projectFolder}`, error);
+                
+                // If running locally, show a helpful message
+                if (isLocalFile) {
+                    projectsList.innerHTML = `
+                        <div class="local-server-warning">
+                            <h3>⚠️ Local Server Required</h3>
+                            <p>Projects cannot load when opening HTML files directly (file:// protocol).</p>
+                            <p><strong>Solution: Run a local server</strong></p>
+                            <div class="code-block">
+                                <p>Open PowerShell in this folder and run:</p>
+                                <code>python -m http.server 8000</code>
+                                <p>Then visit: <a href="http://localhost:8000/projects.html">http://localhost:8000/projects.html</a></p>
+                            </div>
+                            <p><strong>OR</strong> use VS Code Live Server extension</p>
+                        </div>
+                    `;
+                    return;
+                }
             }
         }
 
@@ -39,7 +62,15 @@ document.addEventListener('DOMContentLoaded', async function() {
         projectsList.innerHTML = '';
 
         if (projectsData.length === 0) {
-            projectsList.innerHTML = '<p class="loading">No projects found.</p>';
+            projectsList.innerHTML = `
+                <div class="no-projects-message">
+                    <h3>No projects loaded</h3>
+                    <p>Please make sure you're running a local server to test the site.</p>
+                    <p><strong>Quick Start:</strong></p>
+                    <code>python -m http.server 8000</code>
+                    <p>Then visit <a href="http://localhost:8000/projects.html">http://localhost:8000/projects.html</a></p>
+                </div>
+            `;
             return;
         }
 
@@ -51,7 +82,14 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     } catch (error) {
         console.error('Error loading projects:', error);
-        projectsList.innerHTML = '<p class="loading">Error loading projects. Please try again later.</p>';
+        projectsList.innerHTML = `
+            <div class="error-message">
+                <h3>Error loading projects</h3>
+                <p>Please check the browser console for details.</p>
+                <p><strong>Common fix:</strong> Make sure you're running a local server:</p>
+                <code>python -m http.server 8000</code>
+            </div>
+        `;
     }
 });
 
