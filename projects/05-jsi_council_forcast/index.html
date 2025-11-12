@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSI Council Stock Prediction - S. Khalifa Portfolio</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+    <link rel="stylesheet" href="../../assets/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">S. Khalifa</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../../projects.html" class="nav-link">Projects</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <article class="project-detail">
+            <h1>JSI Council – Stock Prediction System</h1>
+            
+            <img src="jsi_stock.png" alt="JSI Stock Prediction Dashboard" class="project-detail-image" 
+                 onerror="this.style.display='none'">
+            
+            <div class="project-description">
+                <h3>Project Overview</h3>
+                <p>Built a comprehensive stock prediction engine for <strong>JSI Council</strong> to optimize inventory, promotions, and resource planning using advanced machine learning techniques.</p>
+                
+                <h3>🎯 Project Impact:</h3>
+                <ul>
+                    <li>📦 Improved inventory precision by <strong>18%</strong></li>
+                    <li>📈 Predicted peak sales periods, increasing promotion effectiveness by <strong>12%</strong></li>
+                    <li>🚚 Enhanced stock distribution with a <strong>15% reduction in inefficiencies</strong></li>
+                    <li>🧠 Forecasted staffing needs, improving resource allocation</li>
+                    <li>💰 Reduced overstock costs by approximately €80K annually</li>
+                </ul>
+
+                <h3>Technical Implementation:</h3>
+                
+                <div class="expertise-section">
+                    <h4>Data Pipeline</h4>
+                    <ul>
+                        <li>Historical sales data (3+ years)</li>
+                        <li>Seasonal trends and holiday patterns</li>
+                        <li>External factors (weather, events, economic indicators)</li>
+                        <li>Product categories and attributes</li>
+                        <li>Promotional campaign data</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-section">
+                    <h4>Machine Learning Models</h4>
+                    <ul>
+                        <li><strong>Linear Regression:</strong> Baseline model for trend analysis</li>
+                        <li><strong>Random Forest:</strong> Capturing non-linear patterns and feature importance</li>
+                        <li><strong>Gradient Boosting:</strong> High-accuracy predictions with XGBoost</li>
+                        <li><strong>Time Series Analysis:</strong> ARIMA for seasonal decomposition</li>
+                    </ul>
+                </div>
+
+                <h3>Tech Stack & Tools:</h3>
+                <ul>
+                    <li><strong>ML Libraries:</strong> Scikit-learn, XGBoost, TensorFlow</li>
+                    <li><strong>Data Processing:</strong> Pandas, NumPy</li>
+                    <li><strong>Visualization:</strong> Seaborn, Matplotlib, Plotly</li>
+                    <li><strong>Deployment:</strong> Streamlit, Docker</li>
+                    <li><strong>Database:</strong> PostgreSQL</li>
+                </ul>
+
+                <div class="expertise-section">
+                    <h4>Code Sample: Model Training</h4>
+                    <pre><code>from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_absolute_error
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(
+    features, target, test_size=0.2, random_state=42
+)
+
+# Train Random Forest model
+model = RandomForestRegressor(
+    n_estimators=100,
+    max_depth=20,
+    random_state=42
+)
+model.fit(X_train, y_train)
+
+# Make predictions
+predictions = model.predict(X_test)
+mae = mean_absolute_error(y_test, predictions)
+
+print(f"Model MAE: {mae:.2f}")</code></pre>
+                </div>
+
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>📊 Real-time dashboard with interactive visualizations</li>
+                    <li>🔮 Multi-week ahead forecasting</li>
+                    <li>🎯 Product-level and category-level predictions</li>
+                    <li>📱 Mobile-responsive interface for managers</li>
+                    <li>⚠️ Automated alerts for low stock or unexpected demand spikes</li>
+                </ul>
+
+                <h3>Business Outcomes:</h3>
+                <p>The stock prediction system transformed JSI Council's inventory management from reactive to proactive. Store managers now receive accurate forecasts 2-3 weeks in advance, allowing them to optimize ordering, staffing, and promotional activities. The system has become an integral part of their daily operations.</p>
+            </div>
+
+            <a href="../../projects.html" class="back-link">⬅️ Back to Projects</a>
+        </article>
+    </main>
+
+    <script src="../../assets/main.js"></script>
+</body>
+</html>
