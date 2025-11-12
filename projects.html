@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - S. Khalifa</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Projects - S. Khalifa Portfolio</title>
+    <link rel="icon" href="📌" type="image/x-icon">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/main.css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">S. Khalifa</a>
-            </div>
+            <div class="nav-logo">S. Khalifa</div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="index.html#about" class="nav-link">About</a></li>
-                <li><a href="projects.html" class="nav-link active">Projects</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link active">Projects</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -27,23 +25,26 @@
         </div>
     </nav>
 
-    <section class="projects-hero">
-        <div class="container">
+    <!-- Main Content -->
+    <main class="container projects-container">
+        <section class="projects-header">
             <h1>📂 Projects</h1>
-            <p>Explore my work in Data Science, DevOps, and Cloud Engineering</p>
-        </div>
-    </section>
+            <p>A collection of my work in Data Science, Machine Learning, DevOps, and Cloud Infrastructure</p>
+        </section>
 
-    <section class="projects-list">
-        <div class="container">
-            <div id="projects-container">
-                <!-- Projects will be loaded dynamically by JavaScript -->
-                <div class="loading">Loading projects...</div>
-            </div>
-        </div>
-    </section>
+        <!-- Projects will be loaded dynamically -->
+        <section id="projects-list" class="projects-list">
+            <div class="loading">Loading projects...</div>
+        </section>
 
-    <script src="js/projects.js"></script>
-    <script src="js/script.js"></script>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Let's build something awesome together. 🚀</p>
+            <p class="footer-small">© 2025 S. Khalifa. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script src="assets/projects.js"></script>
+    <script src="assets/main.js"></script>
 </body>
 </html>
