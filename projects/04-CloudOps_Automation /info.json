@@ -1,8 +1,0 @@
-{
-  "title": "DevOps & CloudOps Automation",
-  "slug": "04-CloudOps_Automation",
-  "summary": "Automated cloud and infrastructure workflows using scripting and DevOps practices.",
-  "description": "Engineered automation pipelines and operational workflows using Infrastructure as Code and scripting (Bash, PowerShell, Ansible) for **Hardis Group**, **GL Events**, and **LNR**:\n\n- Created Terraform modules and GitLab CI pipelines\n- Automated configuration using Ansible and cloud-native tooling\n- Reduced manual provisioning and setup time by 40%",
-  "image": "preview.png",
-  "link": ""
-}
