@@ -62,13 +62,13 @@ function createProjectCard(project, index) {
 
     const imageUrl = project.image 
         ? `projects/${project.folder}/${project.image}`
-        : 'assets/project_imgs/default-project.svg';
+        : 'assets/project_imgs/background.png';
 
     const projectUrl = `projects/${project.folder}/index.html`;
 
     card.innerHTML = `
         <img src="${imageUrl}" alt="${project.title}" class="project-image" 
-             onerror="this.src='assets/project_imgs/default-project.svg'">
+             onerror="this.src='assets/project_imgs/background.png'">
         <div class="project-content">
             <h2 class="project-title">${project.title}</h2>
             <p class="project-summary">${project.summary || 'No summary available'}</p>
