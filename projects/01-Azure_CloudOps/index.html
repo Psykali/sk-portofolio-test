@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azure CloudOps - S. Khalifa</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Azure CloudOps - S. Khalifa Portfolio</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+    <link rel="stylesheet" href="../../assets/main.css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="../../index.html">S. Khalifa</a>
-            </div>
+            <div class="nav-logo">S. Khalifa</div>
             <ul class="nav-menu">
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../../index.html#about">About</a></li>
-                <li><a href="../../projects.html">Projects</a></li>
-                <li><a href="../../index.html#contact">Contact</a></li>
+                <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../../projects.html" class="nav-link">Projects</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -27,61 +24,42 @@
         </div>
     </nav>
 
-    <main class="project-detail">
-        <div class="container">
-            <a href="../../projects.html" class="back-link">← Back to Projects</a>
+    <!-- Main Content -->
+    <main class="container">
+        <article class="project-detail">
+            <h1>Azure CloudOps - Build, Run, Security & Policy</h1>
             
-            <div id="project-content">
-                <!-- Content will be loaded by JavaScript -->
-                <div class="loading">Loading project details...</div>
+            <img src="preview.png" alt="Azure CloudOps" class="project-detail-image" 
+                 onerror="this.style.display='none'">
+            
+            <div class="project-description">
+                <p>Led Azure infrastructure management and security operations for clients including <strong>GL Events</strong>, <strong>Energizer</strong>, <strong>Rexel</strong>, <strong>LNR</strong>, and <strong>Esabora Web</strong> under the Hardis Group.</p>
+                
+                <h3>Key Responsibilities & Achievements:</h3>
+                <ul>
+                    <li>🏗️ Provisioned and optimized Azure cloud infrastructure</li>
+                    <li>🔒 Implemented RBAC, compliance policies, and secure networking</li>
+                    <li>📊 Monitored cost efficiency, availability, and governance</li>
+                    <li>📋 Built and enforced Azure policy-based access and tagging standards</li>
+                </ul>
+
+                <h3>Technologies Used:</h3>
+                <ul>
+                    <li>Azure Resource Manager (ARM)</li>
+                    <li>Azure Policy & Compliance</li>
+                    <li>Azure Monitor & Log Analytics</li>
+                    <li>Azure RBAC & Security Center</li>
+                    <li>Azure Lighthouse (Multi-tenant management)</li>
+                </ul>
+
+                <h3>Impact:</h3>
+                <p>Managed 300+ servers across multiple client environments, ensuring 99.9% uptime and maintaining strict security compliance standards. Reduced security incidents by 35% through proactive policy enforcement and monitoring.</p>
             </div>
-        </div>
+
+            <a href="../../projects.html" class="back-link">⬅️ Back to Projects</a>
+        </article>
     </main>
 
-    <script>
-        // Get project folder from URL or use current folder name
-        const projectFolder = window.location.pathname.split('/').filter(Boolean).slice(-2, -1)[0] || '01-azure-cloudops';
-        
-        fetch(`../../projects/${projectFolder}/info.json`)
-            .then(response => {
-                if (!response.ok) throw new Error('Project not found');
-                return response.json();
-            })
-            .then(projectData => {
-                const projectContent = document.getElementById('project-content');
-                
-                projectContent.innerHTML = `
-                    <h1>${projectData.title}</h1>
-                    
-                    <div class="project-hero-image">
-                        <img src="${projectData.image}" alt="${projectData.title}" 
-                             onerror="this.style.display='none'">
-                    </div>
-                    
-                    <div class="project-description">
-                        ${projectData.description.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}
-                    </div>
-                    
-                    ${projectData.link ? `
-                    <div class="project-links">
-                        <a href="${projectData.link}" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub Repo
-                        </a>
-                    </div>
-                    ` : ''}
-                `;
-            })
-            .catch(error => {
-                document.getElementById('project-content').innerHTML = `
-                    <div class="error">
-                        <h2>Project Not Found</h2>
-                        <p>Sorry, we couldn't load the project details.</p>
-                        <a href="../../projects.html" class="btn btn-primary">Back to Projects</a>
-                    </div>
-                `;
-            });
-    </script>
-    
-    <script src="../../js/script.js"></script>
+    <script src="../../assets/main.js"></script>
 </body>
 </html>
