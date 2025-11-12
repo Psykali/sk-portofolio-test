@@ -1,8 +1,0 @@
-{
-  "title": "Azure CloudOps - Build, Run, Security & Policy",
-  "slug": "01-Azure_CloudOps",
-  "summary": "Managed and secured Azure environments across major clients.",
-  "description": "Led Azure infrastructure management and security operations for clients including **GL Events**, **Energizer**, **Rexel**, **LNR**, and **Esabora Web** under the Hardis Group.\n\n- Provisioned and optimized Azure cloud infrastructure\n- Implemented RBAC, compliance policies, and secure networking\n- Monitored cost efficiency, availability, and governance\n- Built and enforced Azure policy-based access and tagging standards",
-  "image": "preview.png",
-  "link": ""
-}
