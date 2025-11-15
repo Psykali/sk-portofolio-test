@@ -96,42 +96,16 @@
 }
 
 /* Node positions with staggered animations */
-.node-1 { 
-    top: 10%; 
-    left: 50%; 
-    animation-delay: 0s;
-    background: linear-gradient(45deg, var(--primary), transparent);
-}
-.node-2 { 
-    top: 25%; 
-    right: 10%; 
-    animation-delay: 0.5s;
-    background: linear-gradient(45deg, var(--secondary), transparent);
-}
-.node-3 { 
-    bottom: 25%; 
-    right: 10%; 
-    animation-delay: 1s;
-    background: linear-gradient(45deg, var(--accent), transparent);
-}
-.node-4 { 
-    bottom: 10%; 
-    left: 50%; 
-    animation-delay: 1.5s;
-    background: linear-gradient(45deg, var(--primary), transparent);
-}
-.node-5 { 
-    bottom: 25%; 
-    left: 10%; 
-    animation-delay: 2s;
-    background: linear-gradient(45deg, var(--secondary), transparent);
-}
-.node-6 { 
-    top: 25%; 
-    left: 10%; 
-    animation-delay: 2.5s;
-    background: linear-gradient(45deg, var(--accent), transparent);
-}
+/* Enhanced Tech Nodes with more skills */
+.node-1 { top: 10%; left: 50%; animation-delay: 0s; background: linear-gradient(45deg, var(--primary), transparent); }
+.node-2 { top: 15%; right: 15%; animation-delay: 0.5s; background: linear-gradient(45deg, var(--secondary), transparent); }
+.node-3 { top: 40%; right: 5%; animation-delay: 1s; background: linear-gradient(45deg, var(--accent), transparent); }
+.node-4 { bottom: 40%; right: 15%; animation-delay: 1.5s; background: linear-gradient(45deg, var(--primary), transparent); }
+.node-5 { bottom: 15%; right: 25%; animation-delay: 2s; background: linear-gradient(45deg, var(--secondary), transparent); }
+.node-6 { bottom: 10%; left: 50%; animation-delay: 2.5s; background: linear-gradient(45deg, var(--accent), transparent); }
+.node-7 { bottom: 25%; left: 15%; animation-delay: 3s; background: linear-gradient(45deg, var(--primary), transparent); }
+.node-8 { top: 40%; left: 5%; animation-delay: 3.5s; background: linear-gradient(45deg, var(--secondary), transparent); }
+.node-9 { top: 25%; left: 20%; animation-delay: 4s; background: linear-gradient(45deg, var(--accent), transparent); }
 
 /* Connection lines */
 .tech-connections {
