@@ -45,29 +45,82 @@ class CVLoader {
                     "position": "Azure Cloud / DevOps Consultant",
                     "period": "Aug 2025 - Present",
                     "duration": "Current",
-                    "technologies": ["Azure Cloud", "AI", "Python", "Docker", "Kubernetes", "Terraform", "Azure DevOps"],
-                    "context": "Azure infrastructure management, AI solutions deployment, and DevOps implementation for various clients.",
+                    "technologies": ["Azure Cloud", "AI", "Python", "Docker", "Kubernetes", "Terraform", "Azure DevOps", "YAML", "Bash", "PowerShell", "Entra ID", "Key Vault"],
+                    "context": "Leading Azure infrastructure management, AI solutions deployment, and DevOps implementation for enterprise clients with focus on migration projects and Kubernetes deployments.",
                     "achievements": [
-                        "Migration from JIRA to Azure DevOps",
-                        "Implementation of AI solutions on Kubernetes", 
-                        "Development of standardized deployment processes"
+                        "Migrated JIRA to Azure DevOps using custom scripts and integration tools",
+                        "Deployed AI solutions (Prisme, Azure AI, OpenAI) on Kubernetes via Terraform and Azure DevOps",
+                        "Implemented Windows AVD infrastructure with multiple applications using Infrastructure as Code",
+                        "Created standardized DevOps Forge for centralized automated deployments",
+                        "Managed Entra ID (user accounts, groups, and SPN) and configured Key Vault integration"
                     ],
-                    "projects": ["azure-devops-migration", "ai-kubernetes-deployment"]
+                    "projects": ["azure-devops-migration", "ai-kubernetes-deployment", "avd-implementation", "devops-forge"]
                 },
                 {
-                    "id": "hardis-group", 
+                    "id": "freelance",
+                    "company": "Freelance Consultant",
+                    "position": "Data Scientist & ML Engineer",
+                    "period": "Jan 2025 - Aug 2025",
+                    "duration": "8 months",
+                    "technologies": ["Python", "Machine Learning", "FastAPI", "Streamlit", "Power BI", "SQL", "Revit API", "Data Analysis"],
+                    "context": "Data science and machine learning consulting for construction and retail sectors, developing predictive models and data platforms.",
+                    "achievements": [
+                        "Developed inventory forecasting model improving accuracy by 18% for JSI Council",
+                        "Created Streamlit platform for real-time interaction with predictive models",
+                        "Improved material demand forecasting, increasing construction planning efficiency",
+                        "Connected FastAPI with Revit for seamless data processing and retrieval"
+                    ],
+                    "projects": ["jsi-inventory-forecasting", "eiffage-dashboard", "construction-ml-pipeline"]
+                },
+                {
+                    "id": "gl-events",
+                    "company": "GL events",
+                    "position": "Consultant Azure Cloud / DevOps",
+                    "period": "Jun 2024 - Dec 2024",
+                    "duration": "7 months",
+                    "technologies": ["Azure DevOps", "Terraform", "Ansible", "Docker", "Kubernetes", "Harbor", "HashiCorp Vault", "CI/CD", "Linux", "Windows"],
+                    "context": "DevOps implementation and cloud automation for event management infrastructure.",
+                    "achievements": [
+                        "Reduced deployment cycles by 30% through CI/CD pipeline implementation",
+                        "Decreased environment setup time by 40% across 350+ servers using Terraform and Ansible",
+                        "Achieved 98% deployment success rate with Azure DevOps integrated pipelines",
+                        "Trained 3 operational team members on DevOps integration and pipeline management"
+                    ],
+                    "projects": ["cicd-automation", "terraform-ansible-scripts", "team-training"]
+                },
+                {
+                    "id": "hardis-group",
                     "company": "Hardis Group",
                     "position": "Consultant Azure Cloud / DevOps",
-                    "period": "Nov 2022 - Jun 2024", 
-                    "duration": "1.5 years",
-                    "technologies": ["Azure Cloud", "Docker", "Kubernetes", "SQL", "Azure DevOps", "GitLab"],
-                    "context": "Cloud consulting for multiple clients through Hardis Group (ESN).",
+                    "period": "Jan 2022 - Jun 2024",
+                    "duration": "2.5 years",
+                    "technologies": ["Azure Cloud", "Docker", "Kubernetes", "SQL", "Azure DevOps", "GitLab", "PowerShell", "Azure Lighthouse", "FinOps", "RBAC/IAM"],
+                    "context": "Cloud consulting for multiple enterprise clients through Hardis Group (ESN), focusing on cost optimization, monitoring, and DevOps practices.",
                     "achievements": [
-                        "Reduced cloud costs by 25% through budget alerts and tagging",
-                        "Improved data visibility by 30% through dashboards and workbooks",
-                        "Reduced deployment errors by 20% for 30+ applications"
+                        "Reduced cloud costs by 25% through budget alerts and resource tagging strategies",
+                        "Improved data visibility by 30% with custom workbooks and dashboards",
+                        "Reduced deployment errors by 20% for 30+ applications using Azure DevOps and GitLab",
+                        "Implemented Azure Lighthouse and Policies for multi-tenant management",
+                        "Trained 2 interns on Azure fundamentals leading to successful cost optimization initiative"
                     ],
-                    "projects": ["cost-optimization", "dashboard-development", "cicd-improvement"]
+                    "projects": ["cost-optimization", "dashboard-development", "cicd-improvement", "azure-governance"]
+                },
+                {
+                    "id": "itsense",
+                    "company": "ITsense SAS",
+                    "position": "DevOps Engineer",
+                    "period": "Jan 2019 - Dec 2021",
+                    "duration": "3 years",
+                    "technologies": ["Linux", "Windows", "Docker", "Proxmox", "SQL", "MariaDB", "Bash", "Ansible", "PowerShell", "OpenVPN", "Centreon"],
+                    "context": "System administration and DevOps engineering for private, OVH, and hybrid cloud environments with focus on virtualization and automation.",
+                    "achievements": [
+                        "Achieved 99% availability for critical client applications through SQL/MariaDB optimization",
+                        "Automated 40% of manual workload using Bash, Ansible and PowerShell",
+                        "Migrated 50+ servers to Proxmox, improving resource efficiency by 30%",
+                        "Secured remote access for 50+ employees with OpenVPN",
+                        "Member of disaster recovery team during OVH Strasbourg datacenter fire"
+                    ],
+                    "projects": ["server-migration", "automation-scripts", "monitoring-dashboards", "disaster-recovery"]
                 }
             ]
         };
@@ -150,7 +203,7 @@ class CVLoader {
 
         container.innerHTML = `
             <div class="cert-card">
-                <h4>Certifications</h4>
+                <h4>${this.currentLang === 'fr' ? 'Certifications' : 'Certifications'}</h4>
                 <ul>
                     ${this.certificationsData.certifications?.map(cert => 
                         `<li>${cert}</li>`
@@ -158,7 +211,7 @@ class CVLoader {
                 </ul>
             </div>
             <div class="cert-card">
-                <h4>Education</h4>
+                <h4>${this.currentLang === 'fr' ? 'Formation' : 'Education'}</h4>
                 <ul>
                     ${this.certificationsData.education?.map(edu => 
                         `<li>${edu}</li>`
@@ -174,9 +227,12 @@ class CVLoader {
 
         const skills = [
             "Azure Cloud", "DevOps", "Kubernetes", "Docker", "Terraform",
-            "Python", "AI/ML", "CI/CD", "Azure DevOps", "GitLab",
+            "Python", "Machine Learning", "CI/CD", "Azure DevOps", "GitLab",
             "PowerShell", "Bash", "Linux", "Windows Server", "SQL",
-            "Data Analysis", "Cost Optimization", "Infrastructure as Code"
+            "Data Analysis", "Cost Optimization", "Infrastructure as Code",
+            "Entra ID", "PaaS", "SaaS", "IaaS", "Team Management", "Databases",
+            "DevSecOps", "FinOps", "Ansible", "YAML", "ARM Templates", "Bicep",
+            "Azure Lighthouse", "Azure Policies", "Monitoring", "Automation"
         ];
 
         container.innerHTML = skills.map(skill => 
@@ -189,13 +245,27 @@ class CVLoader {
             word.charAt(0).toUpperCase() + word.slice(1)
         ).join(' ');
     }
+
+    // Method to reload data when language changes
+    async reloadForLanguage(lang) {
+        this.currentLang = lang;
+        await this.loadData();
+    }
 }
 
 // Initialize CV loader when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     window.cvLoader = new CVLoader();
-    // Load data after language manager is ready
+    
+    // Load data after a short delay to ensure language manager is ready
     setTimeout(() => {
         window.cvLoader.loadData();
     }, 100);
+});
+
+// Listen for language changes
+document.addEventListener('languageChanged', (event) => {
+    if (window.cvLoader) {
+        window.cvLoader.reloadForLanguage(event.detail.lang);
+    }
 });
