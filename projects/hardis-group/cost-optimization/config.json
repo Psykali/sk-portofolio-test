@@ -1,0 +1,41 @@
+{
+    "id": "cost-optimization",
+    "title": "Cloud Cost Optimization Platform",
+    "company": "Hardis Group",
+    "client": "Multiple Enterprise Clients",
+    "period": "2023",
+    "duration": "6 months",
+    "technologies": ["Azure Cost Management", "PowerShell", "Azure Policies", "Budget API", "Power BI"],
+    "skills": ["Cost Optimization", "Azure Governance", "Automation", "Data Analysis"],
+    "category": "azure",
+    "description": "Developed a comprehensive cost optimization platform that reduced cloud spending by 25% across multiple enterprise clients through automated budget management and resource optimization.",
+    "achievements": [
+        "Reduced cloud waste by 25% through automated budget alerts and resource right-sizing",
+        "Implemented resource tagging strategy improving cost allocation accuracy by 40%",
+        "Developed custom PowerShell scripts for automated cost reporting",
+        "Created Power BI dashboards for real-time cost visibility"
+    ],
+    "metrics": [
+        "25% reduction in cloud spending",
+        "40% improvement in cost visibility", 
+        "Automated monthly cost reporting for 50+ subscriptions",
+        "95% accuracy in cost allocation"
+    ],
+    "images": [
+        "cost-dashboard.jpg",
+        "architecture-diagram.png"
+    ],
+    "code_snippets": [
+        {
+            "file": "budget-alert.ps1",
+            "language": "powershell",
+            "content": "# PowerShell script for automated budget alerts"
+        }
+    ],
+    "links": {
+        "github": "https://github.com/your-repo/cost-optimization",
+        "demo": "https://demo.example.com",
+        "documentation": "https://docs.example.com"
+    },
+    "tags": ["azure", "cost-optimization", "automation", "governance", "powerbi"]
+}
