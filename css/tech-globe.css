@@ -31,6 +31,13 @@
     border-radius: 50%;
     filter: blur(2px);
     animation: sunPulse 4s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
 .sun-glow {
@@ -89,69 +96,132 @@
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .planet-core {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background: linear-gradient(45deg, var(--primary), var(--secondary));
     box-shadow: 0 4px 15px rgba(0, 162, 255, 0.3);
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    padding: 4px;
+    word-wrap: break-word;
+    line-height: 1.1;
 }
 
 .planet-large .planet-core {
-    width: 40px;
-    height: 40px;
-}
-
-.planet span {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--light);
-    background: rgba(10, 10, 15, 0.8);
-    padding: 2px 6px;
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
-    white-space: nowrap;
+    width: 60px;
+    height: 60px;
+    font-size: 0.75rem;
 }
 
 .planet:hover .planet-core {
     transform: scale(1.3);
     box-shadow: 0 6px 25px rgba(0, 162, 255, 0.6);
-}
-
-.planet:hover span {
-    background: var(--primary);
-    color: white;
+    z-index: 10;
 }
 
 /* Individual Planet Colors and Sizes */
-.planet-1 .planet-core { background: linear-gradient(45deg, #0078d4, #00a2ff); }
-.planet-2 .planet-core { background: linear-gradient(45deg, #2496ed, #1e90ff); width: 28px; height: 28px; }
-.planet-3 .planet-core { background: linear-gradient(45deg, #7b42f6, #b44cff); }
-.planet-4 .planet-core { background: linear-gradient(45deg, #3776ab, #ffd343); width: 32px; height: 32px; }
-.planet-5 .planet-core { background: linear-gradient(45deg, #ff6b6b, #ffa500); }
-.planet-6 .planet-core { background: linear-gradient(45deg, #f15025, #dd4814); }
-.planet-7 .planet-core { background: linear-gradient(45deg, #00d4aa, #00b894); width: 40px; height: 40px; }
-.planet-8 .planet-core { background: linear-gradient(45deg, #e74c3c, #c0392b); }
-.planet-9 .planet-core { background: linear-gradient(45deg, #9b59b6, #8e44ad); }
-.planet-10 .planet-core { background: linear-gradient(45deg, #f39c12, #e67e22); }
-.planet-11 .planet-core { background: linear-gradient(45deg, #34495e, #2c3e50); width: 26px; height: 26px; }
-.planet-12 .planet-core { background: linear-gradient(45deg, #e74c3c, #ff6b6b); }
-.planet-13 .planet-core { background: linear-gradient(45deg, #9b59b6, #8e44ad); width: 28px; height: 28px; }
-.planet-14 .planet-core { background: linear-gradient(45deg, #3498db, #2980b9); }
-.planet-15 .planet-core { background: linear-gradient(45deg, #e67e22, #d35400); width: 24px; height: 24px; }
-.planet-16 .planet-core { background: linear-gradient(45deg, #c0392b, #a93226); }
-.planet-17 .planet-core { background: linear-gradient(45deg, #16a085, #1abc9c); width: 32px; height: 32px; }
-.planet-18 .planet-core { background: linear-gradient(45deg, #27ae60, #2ecc71); }
-.planet-19 .planet-core { background: linear-gradient(45deg, #8e44ad, #9b59b6); }
-.planet-20 .planet-core { background: linear-gradient(45deg, #f1c40f, #f39c12); width: 34px; height: 34px; }
+.planet-1 .planet-core { 
+    background: linear-gradient(135deg, #0078d4, #00a2ff); 
+    font-size: 0.65rem;
+}
+.planet-2 .planet-core { 
+    background: linear-gradient(135deg, #2496ed, #1e90ff); 
+    width: 45px; height: 45px;
+}
+.planet-3 .planet-core { 
+    background: linear-gradient(135deg, #7b42f6, #b44cff);
+    font-size: 0.6rem;
+}
+.planet-4 .planet-core { 
+    background: linear-gradient(135deg, #3776ab, #ffd343); 
+    width: 55px; height: 55px;
+    font-size: 0.75rem;
+}
+.planet-5 .planet-core { 
+    background: linear-gradient(135deg, #ff6b6b, #ffa500);
+    font-size: 0.8rem;
+}
+.planet-6 .planet-core { 
+    background: linear-gradient(135deg, #f15025, #dd4814);
+    font-size: 0.7rem;
+}
+.planet-7 .planet-core { 
+    background: linear-gradient(135deg, #00d4aa, #00b894); 
+    width: 65px; height: 65px;
+    font-size: 0.8rem;
+}
+.planet-8 .planet-core { 
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    font-size: 0.8rem;
+}
+.planet-9 .planet-core { 
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    font-size: 0.65rem;
+}
+.planet-10 .planet-core { 
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    font-size: 0.7rem;
+}
+.planet-11 .planet-core { 
+    background: linear-gradient(135deg, #34495e, #2c3e50); 
+    width: 48px; height: 48px;
+    font-size: 0.65rem;
+}
+.planet-12 .planet-core { 
+    background: linear-gradient(135deg, #e74c3c, #ff6b6b);
+    font-size: 0.8rem;
+}
+.planet-13 .planet-core { 
+    background: linear-gradient(135deg, #9b59b6, #8e44ad); 
+    width: 46px; height: 46px;
+    font-size: 0.75rem;
+}
+.planet-14 .planet-core { 
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    font-size: 0.8rem;
+}
+.planet-15 .planet-core { 
+    background: linear-gradient(135deg, #e67e22, #d35400); 
+    width: 44px; height: 44px;
+    font-size: 0.65rem;
+}
+.planet-16 .planet-core { 
+    background: linear-gradient(135deg, #c0392b, #a93226);
+    font-size: 0.7rem;
+}
+.planet-17 .planet-core { 
+    background: linear-gradient(135deg, #16a085, #1abc9c); 
+    width: 52px; height: 52px;
+    font-size: 0.75rem;
+}
+.planet-18 .planet-core { 
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    font-size: 0.6rem;
+}
+.planet-19 .planet-core { 
+    background: linear-gradient(135deg, #8e44ad, #9b59b6);
+    font-size: 0.75rem;
+}
+.planet-20 .planet-core { 
+    background: linear-gradient(135deg, #f1c40f, #f39c12); 
+    width: 48px; height: 48px;
+    font-size: 0.7rem;
+}
 
 /* Cloud Service Orbits */
 .service-orbit {
@@ -176,18 +246,22 @@
     transform: translateX(-50%);
     background: var(--accent);
     color: white;
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 0.7rem;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    min-width: 50px;
+    text-align: center;
 }
 
 .service-node:hover {
     transform: translateX(-50%) scale(1.2);
     background: var(--primary);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 /* Tooltips */
@@ -198,7 +272,7 @@
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(10, 10, 15, 0.9);
+    background: rgba(10, 10, 15, 0.95);
     color: var(--light);
     padding: 8px 12px;
     border-radius: 8px;
@@ -210,6 +284,7 @@
     backdrop-filter: blur(10px);
     border: 1px solid var(--card-border);
     z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .planet:hover::after,
@@ -319,6 +394,18 @@
     .orbit-9 { width: 320px; height: 320px; }
     .orbit-10 { width: 350px; height: 350px; }
     
+    .planet-core {
+        width: 40px;
+        height: 40px;
+        font-size: 0.6rem;
+    }
+    
+    .planet-large .planet-core {
+        width: 50px;
+        height: 50px;
+        font-size: 0.65rem;
+    }
+    
     /* Hide some orbits on mobile */
     .orbit-11,
     .orbit-12,
@@ -333,11 +420,26 @@
         display: none;
     }
     
-    .planet span {
-        font-size: 0.6rem;
-    }
-    
     .service-orbit {
         display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .solar-system {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .orbit-1 { width: 60px; height: 60px; }
+    .orbit-2 { width: 80px; height: 80px; }
+    .orbit-3 { width: 100px; height: 100px; }
+    .orbit-4 { width: 120px; height: 120px; }
+    .orbit-5 { width: 140px; height: 140px; }
+    
+    .planet-core {
+        width: 35px;
+        height: 35px;
+        font-size: 0.55rem;
     }
 }
