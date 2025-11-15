@@ -17,6 +17,11 @@ class LanguageManager {
             this.translations = await response.json();
         } catch (error) {
             console.error('Error loading translations:', error);
+            // Fallback to English if French fails
+            if (this.currentLang === 'fr') {
+                this.currentLang = 'en';
+                await this.loadTranslations();
+            }
         }
     }
 
@@ -39,28 +44,47 @@ class LanguageManager {
             btn.classList.remove('active');
         });
         document.getElementById(`lang-${lang}`).classList.add('active');
+
+        // Reload CV data with new language
+        if (window.cvLoader) {
+            await window.cvLoader.loadData();
+        }
     }
 
     updateContent() {
         // Update all elements with data-i18n attribute
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
-            if (this.translations[key]) {
-                element.textContent = this.translations[key];
+            if (this.getTranslation(key)) {
+                element.textContent = this.getTranslation(key);
             }
         });
 
         // Update page title
-        document.title = this.translations.site_title || 'S. Khalifa - Portfolio';
+        document.title = this.getTranslation('site_title') || 'S. Khalifa - Portfolio';
 
         // Update meta description
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription && this.translations.site_description) {
-            metaDescription.setAttribute('content', this.translations.site_description);
+        let metaDescription = document.querySelector('meta[name="description"]');
+        if (!metaDescription) {
+            metaDescription = document.createElement('meta');
+            metaDescription.name = 'description';
+            document.head.appendChild(metaDescription);
         }
+        metaDescription.setAttribute('content', this.getTranslation('site_description') || 'Azure Cloud Consultant Portfolio');
+    }
+
+    getTranslation(key) {
+        const keys = key.split('.');
+        let value = this.translations;
+        
+        for (const k of keys) {
+            value = value[k];
+            if (value === undefined) return undefined;
+        }
+        return value;
     }
 
     t(key) {
-        return this.translations[key] || key;
+        return this.getTranslation(key) || key;
     }
 }
