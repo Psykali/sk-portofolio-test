@@ -1,5 +1,5 @@
-/* Solar System Tech Globe */
-.tech-sphere {
+/* Solar System Tech Planets */
+.tech-solar-system {
     position: relative;
     width: 600px;
     height: 600px;
@@ -8,13 +8,14 @@
     justify-content: center;
 }
 
-.solar-system {
+.solar-system-container {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-.sun-core {
+/* Sun/Core */
+.system-core {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -23,233 +24,366 @@
     height: 80px;
     background: radial-gradient(
         circle at 30% 30%,
-        #ff6b00 0%,
-        #ff8c00 30%,
-        #ffa500 70%
+        #ff6b35 0%,
+        #ff8e53 30%,
+        #ffb174 70%
     );
     border-radius: 50%;
-    filter: blur(2px);
-    box-shadow: 0 0 50px #ff8c00, 0 0 100px #ff4500;
+    box-shadow: 0 0 50px #ff6b35, 0 0 100px #ff8e53;
+    z-index: 10;
     animation: sunPulse 4s ease-in-out infinite;
 }
 
+/* Orbit Paths */
 .orbit-path {
     position: absolute;
     top: 50%;
     left: 50%;
-    border: 1px solid rgba(0, 162, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
 
 .orbit-1 { width: 200px; height: 200px; }
-.orbit-2 { width: 300px; height: 300px; }
-.orbit-3 { width: 400px; height: 400px; }
-.orbit-4 { width: 500px; height: 500px; }
-.orbit-5 { width: 600px; height: 600px; }
+.orbit-2 { width: 280px; height: 280px; }
+.orbit-3 { width: 360px; height: 360px; }
+.orbit-4 { width: 440px; height: 440px; }
+.orbit-5 { width: 520px; height: 520px; }
 
+/* Tech Planets */
 .tech-planet {
     position: absolute;
-    background: var(--card-bg);
-    border: 2px solid var(--primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--light);
+    color: white;
     font-weight: 600;
     font-size: 0.8rem;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 162, 255, 0.3);
+    text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-align: center;
-    padding: 0.5rem;
-    animation: planetOrbit linear infinite;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    animation: floatPlanet 3s ease-in-out infinite;
 }
 
 .tech-planet:hover {
-    background: var(--primary);
     transform: scale(1.2);
-    box-shadow: 0 12px 40px rgba(0, 162, 255, 0.6);
-    z-index: 10;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    z-index: 20;
 }
 
-/* Planet sizes based on importance */
-.planet-large { width: 70px; height: 70px; font-size: 0.9rem; }
-.planet-medium { width: 60px; height: 60px; font-size: 0.8rem; }
-.planet-small { width: 50px; height: 50px; font-size: 0.7rem; }
-
-/* Planet positions with staggered orbits */
-.planet-1 { 
-    top: 0; left: 50%; transform: translateX(-50%);
-    animation-duration: 15s;
+/* Planet Sizes and Colors */
+.planet-azure { 
+    width: 70px; height: 70px; 
+    background: linear-gradient(135deg, #0078d4, #00a2ff);
+    font-size: 0.7rem;
 }
-.planet-2 { 
-    top: 15%; right: 15%;
-    animation-duration: 18s;
-    animation-delay: -2s;
+.planet-docker { 
+    width: 50px; height: 50px; 
+    background: linear-gradient(135deg, #2496ed, #1d63ed);
 }
-.planet-3 { 
-    top: 40%; right: 0;
-    animation-duration: 22s;
-    animation-delay: -4s;
+.planet-entraid { 
+    width: 45px; height: 45px; 
+    background: linear-gradient(135deg, #5c2d91, #7b42f6);
 }
-.planet-4 { 
-    bottom: 40%; right: 15%;
-    animation-duration: 20s;
-    animation-delay: -6s;
+.planet-paas { 
+    width: 40px; height: 40px; 
+    background: linear-gradient(135deg, #00a2ff, #00d4aa);
 }
-.planet-5 { 
-    bottom: 15%; right: 25%;
-    animation-duration: 25s;
-    animation-delay: -8s;
+.planet-saas { 
+    width: 40px; height: 40px; 
+    background: linear-gradient(135deg, #00d4aa, #7b42f6);
 }
-.planet-6 { 
-    bottom: 0; left: 50%; transform: translateX(-50%);
-    animation-duration: 17s;
-    animation-delay: -10s;
+.planet-iaas { 
+    width: 45px; height: 45px; 
+    background: linear-gradient(135deg, #ff6b35, #ff8e53);
 }
-.planet-7 { 
-    bottom: 25%; left: 15%;
-    animation-duration: 19s;
-    animation-delay: -12s;
+.planet-iac { 
+    width: 50px; height: 50px; 
+    background: linear-gradient(135deg, #7b42f6, #00a2ff);
 }
-.planet-8 { 
-    top: 40%; left: 0;
-    animation-duration: 23s;
-    animation-delay: -14s;
+.planet-python { 
+    width: 60px; height: 60px; 
+    background: linear-gradient(135deg, #3776ab, #ffd343);
+    color: #333;
 }
-.planet-9 { 
-    top: 25%; left: 20%;
-    animation-duration: 21s;
-    animation-delay: -16s;
+.planet-ml { 
+    width: 55px; height: 55px; 
+    background: linear-gradient(135deg, #ff6b35, #ff8e53);
 }
-.planet-10 { 
-    top: 10%; right: 30%;
-    animation-duration: 16s;
-    animation-delay: -18s;
+.planet-linux { 
+    width: 45px; height: 45px; 
+    background: linear-gradient(135deg, #333333, #666666);
 }
-.planet-11 { 
-    bottom: 30%; right: 35%;
-    animation-duration: 24s;
-    animation-delay: -20s;
+.planet-windows { 
+    width: 45px; height: 45px; 
+    background: linear-gradient(135deg, #0078d4, #00a2ff);
 }
-.planet-12 { 
-    bottom: 20%; left: 30%;
-    animation-duration: 20s;
-    animation-delay: -22s;
+.planet-team-mgmt { 
+    width: 65px; height: 65px; 
+    background: linear-gradient(135deg, #00d4aa, #00a2ff);
+    font-size: 0.7rem;
 }
-.planet-13 { 
-    top: 30%; left: 35%;
-    animation-duration: 18s;
-    animation-delay: -24s;
+.planet-databases { 
+    width: 50px; height: 50px; 
+    background: linear-gradient(135deg, #ff8e53, #ff6b35);
 }
-.planet-14 { 
-    top: 20%; right: 40%;
-    animation-duration: 22s;
-    animation-delay: -26s;
+.planet-devsecops { 
+    width: 55px; height: 55px; 
+    background: linear-gradient(135deg, #ff6b35, #7b42f6);
 }
-
-/* Planet content - multi-line support */
-.planet-content {
-    text-align: center;
-    line-height: 1.2;
-    word-wrap: break-word;
+.planet-finops { 
+    width: 45px; height: 45px; 
+    background: linear-gradient(135deg, #00d4aa, #0078d4);
 }
-
-/* Connection lines between planets */
-.planet-connections {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+.planet-bash { 
+    width: 40px; height: 40px; 
+    background: linear-gradient(135deg, #333333, #666666);
 }
-
-.connection-line {
-    position: absolute;
-    background: linear-gradient(90deg, var(--primary), transparent);
-    height: 1px;
-    transform-origin: left center;
-    opacity: 0.1;
+.planet-powershell { 
+    width: 50px; height: 50px; 
+    background: linear-gradient(135deg, #0078d4, #5c2d91);
 }
-
-/* Enhanced particle background for solar system */
-.solar-particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+.planet-sql { 
+    width: 45px; height: 45px; 
+    background: linear-gradient(135deg, #ff8e53, #ff6b35);
 }
-
-.solar-particle {
-    position: absolute;
-    background: var(--primary);
-    border-radius: 50%;
-    opacity: 0.1;
-    animation: solarFloat linear infinite;
+.planet-kquery { 
+    width: 40px; height: 40px; 
+    background: linear-gradient(135deg, #00a2ff, #0078d4);
+}
+.planet-json { 
+    width: 35px; height: 35px; 
+    background: linear-gradient(135deg, #ffd343, #ffb174);
+    color: #333;
+}
+.planet-yaml { 
+    width: 35px; height: 35px; 
+    background: linear-gradient(135deg, #00d4aa, #00a2ff);
+}
+.planet-mariadb { 
+    width: 40px; height: 40px; 
+    background: linear-gradient(135deg, #0078d4, #5c2d91);
+}
+.planet-data-science { 
+    width: 55px; height: 55px; 
+    background: linear-gradient(135deg, #7b42f6, #00a2ff);
+}
+.planet-data-analysis { 
+    width: 50px; height: 50px; 
+    background: linear-gradient(135deg, #00a2ff, #00d4aa);
+}
+.planet-etl { 
+    width: 45px; height: 45px; 
+    background: linear-gradient(135deg, #ff6b35, #00d4aa);
+}
+.planet-virtualisation { 
+    width: 50px; height: 50px; 
+    background: linear-gradient(135deg, #5c2d91, #7b42f6);
 }
 
-.solar-particle:nth-child(1) { width: 2px; height: 2px; top: 20%; left: 10%; animation-duration: 20s; }
-.solar-particle:nth-child(2) { width: 3px; height: 3px; top: 60%; left: 80%; animation-duration: 25s; }
-.solar-particle:nth-child(3) { width: 1px; height: 1px; top: 80%; left: 30%; animation-duration: 30s; }
-.solar-particle:nth-child(4) { width: 2px; height: 2px; top: 40%; left: 60%; animation-duration: 22s; }
-.solar-particle:nth-child(5) { width: 3px; height: 3px; top: 10%; left: 70%; animation-duration: 28s; }
+/* Planet Positions and Animations */
+.planet-azure { 
+    top: calc(50% - 100px); left: 50%;
+    animation: orbit1 20s linear infinite;
+}
+.planet-docker { 
+    top: calc(50% - 140px); left: calc(50% + 140px);
+    animation: orbit2 25s linear infinite;
+}
+.planet-entraid { 
+    top: calc(50% + 140px); left: calc(50% - 140px);
+    animation: orbit3 18s linear infinite;
+}
+.planet-paas { 
+    top: calc(50% - 180px); left: calc(50% - 180px);
+    animation: orbit4 22s linear infinite;
+}
+.planet-saas { 
+    top: calc(50% + 180px); left: calc(50% + 180px);
+    animation: orbit5 28s linear infinite;
+}
+.planet-iaas { 
+    top: calc(50% - 220px); left: calc(50% + 220px);
+    animation: orbit1 30s linear infinite;
+}
+.planet-iac { 
+    top: calc(50% + 220px); left: calc(50% - 220px);
+    animation: orbit2 26s linear infinite;
+}
+.planet-python { 
+    top: calc(50% - 260px); left: calc(50% - 260px);
+    animation: orbit3 24s linear infinite;
+}
+.planet-ml { 
+    top: calc(50% + 260px); left: calc(50% + 260px);
+    animation: orbit4 32s linear infinite;
+}
+.planet-linux { 
+    top: calc(50% - 140px); left: calc(50% + 100px);
+    animation: orbit5 19s linear infinite;
+}
+.planet-windows { 
+    top: calc(50% + 100px); left: calc(50% - 140px);
+    animation: orbit1 21s linear infinite;
+}
+.planet-team-mgmt { 
+    top: calc(50% - 180px); left: calc(50% + 60px);
+    animation: orbit2 23s linear infinite;
+}
+.planet-databases { 
+    top: calc(50% + 60px); left: calc(50% - 180px);
+    animation: orbit3 27s linear infinite;
+}
+.planet-devsecops { 
+    top: calc(50% - 220px); left: calc(50% - 80px);
+    animation: orbit4 29s linear infinite;
+}
+.planet-finops { 
+    top: calc(50% + 80px); left: calc(50% - 220px);
+    animation: orbit5 25s linear infinite;
+}
+.planet-bash { 
+    top: calc(50% - 100px); left: calc(50% - 160px);
+    animation: orbit1 20s linear infinite;
+}
+.planet-powershell { 
+    top: calc(50% + 160px); left: calc(50% - 100px);
+    animation: orbit2 22s linear infinite;
+}
+.planet-sql { 
+    top: calc(50% - 120px); left: calc(50% + 180px);
+    animation: orbit3 26s linear infinite;
+}
+.planet-kquery { 
+    top: calc(50% + 180px); left: calc(50% - 120px);
+    animation: orbit4 24s linear infinite;
+}
+.planet-json { 
+    top: calc(50% - 200px); left: calc(50% + 40px);
+    animation: orbit5 28s linear infinite;
+}
+.planet-yaml { 
+    top: calc(50% + 40px); left: calc(50% - 200px);
+    animation: orbit1 30s linear infinite;
+}
+.planet-mariadb { 
+    top: calc(50% - 160px); left: calc(50% + 120px);
+    animation: orbit2 27s linear infinite;
+}
+.planet-data-science { 
+    top: calc(50% + 120px); left: calc(50% - 160px);
+    animation: orbit3 23s linear infinite;
+}
+.planet-data-analysis { 
+    top: calc(50% - 240px); left: calc(50% + 20px);
+    animation: orbit4 31s linear infinite;
+}
+.planet-etl { 
+    top: calc(50% + 20px); left: calc(50% - 240px);
+    animation: orbit5 29s linear infinite;
+}
+.planet-virtualisation { 
+    top: calc(50% - 80px); left: calc(50% + 200px);
+    animation: orbit1 26s linear infinite;
+}
 
-/* Solar System Animations */
+/* Orbit Animations */
+@keyframes orbit1 {
+    0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+@keyframes orbit2 {
+    0% { transform: rotate(60deg) translateX(140px) rotate(-60deg); }
+    100% { transform: rotate(420deg) translateX(140px) rotate(-420deg); }
+}
+
+@keyframes orbit3 {
+    0% { transform: rotate(120deg) translateX(180px) rotate(-120deg); }
+    100% { transform: rotate(480deg) translateX(180px) rotate(-480deg); }
+}
+
+@keyframes orbit4 {
+    0% { transform: rotate(180deg) translateX(220px) rotate(-180deg); }
+    100% { transform: rotate(540deg) translateX(220px) rotate(-540deg); }
+}
+
+@keyframes orbit5 {
+    0% { transform: rotate(240deg) translateX(260px) rotate(-240deg); }
+    100% { transform: rotate(600deg) translateX(260px) rotate(-600deg); }
+}
+
 @keyframes sunPulse {
     0%, 100% { 
         transform: translate(-50%, -50%) scale(1);
-        box-shadow: 0 0 50px #ff8c00, 0 0 100px #ff4500;
+        box-shadow: 0 0 50px #ff6b35, 0 0 100px #ff8e53;
     }
     50% { 
         transform: translate(-50%, -50%) scale(1.1);
-        box-shadow: 0 0 70px #ff8c00, 0 0 140px #ff4500;
+        box-shadow: 0 0 70px #ff6b35, 0 0 140px #ff8e53;
     }
 }
 
-@keyframes planetOrbit {
-    0% { 
-        transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg);
-    }
-    100% { 
-        transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg);
-    }
+@keyframes floatPlanet {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
 }
 
-@keyframes solarFloat {
+/* Particle background */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    background: var(--primary);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: floatParticle linear infinite;
+}
+
+.particle:nth-child(1) { 
+    width: 4px; height: 4px; top: 20%; left: 10%; animation-duration: 15s; 
+    background: var(--primary);
+}
+.particle:nth-child(2) { 
+    width: 6px; height: 6px; top: 60%; left: 80%; animation-duration: 20s; 
+    background: var(--secondary);
+}
+.particle:nth-child(3) { 
+    width: 3px; height: 3px; top: 80%; left: 30%; animation-duration: 25s; 
+    background: var(--accent);
+}
+.particle:nth-child(4) { 
+    width: 5px; height: 5px; top: 40%; left: 60%; animation-duration: 18s; 
+    background: var(--primary);
+}
+.particle:nth-child(5) { 
+    width: 4px; height: 4px; top: 10%; left: 70%; animation-duration: 22s; 
+    background: var(--secondary);
+}
+
+@keyframes floatParticle {
     0% { 
         transform: translateY(100vh) translateX(0) rotate(0deg);
         opacity: 0;
     }
     10% { 
-        opacity: 0.1;
+        opacity: 0.3;
     }
     90% { 
-        opacity: 0.1;
+        opacity: 0.3;
     }
     100% { 
         transform: translateY(-100px) translateX(100px) rotate(360deg);
         opacity: 0;
     }
 }
-
-/* Set orbit radii for CSS variables */
-.planet-1 { --orbit-radius: 100px; }
-.planet-2 { --orbit-radius: 150px; }
-.planet-3 { --orbit-radius: 200px; }
-.planet-4 { --orbit-radius: 150px; }
-.planet-5 { --orbit-radius: 200px; }
-.planet-6 { --orbit-radius: 100px; }
-.planet-7 { --orbit-radius: 150px; }
-.planet-8 { --orbit-radius: 200px; }
-.planet-9 { --orbit-radius: 150px; }
-.planet-10 { --orbit-radius: 120px; }
-.planet-11 { --orbit-radius: 180px; }
-.planet-12 { --orbit-radius: 160px; }
-.planet-13 { --orbit-radius: 140px; }
-.planet-14 { --orbit-radius: 170px; }
