@@ -224,7 +224,7 @@ class CVLoader {
     renderSkills() {
         const container = document.getElementById('skills-cloud');
         if (!container) return;
-
+    
         const skills = [
             "Azure Cloud", "DevOps", "Kubernetes", "Docker", "Terraform",
             "Python", "Machine Learning", "CI/CD", "Azure DevOps", "GitLab",
@@ -232,9 +232,13 @@ class CVLoader {
             "Data Analysis", "Cost Optimization", "Infrastructure as Code",
             "Entra ID", "PaaS", "SaaS", "IaaS", "Team Management", "Databases",
             "DevSecOps", "FinOps", "Ansible", "YAML", "ARM Templates", "Bicep",
-            "Azure Lighthouse", "Azure Policies", "Monitoring", "Automation"
+            "KQuery", "JSON", "MariaDB", "Data Science", "Data Engineering",
+            "ETL & ELT", "Virtualisation", "Azure AI", "OpenAI", "Streamlit",
+            "FastAPI", "Power BI", "Revit API", "HashiCorp Vault", "Harbor",
+            "Azure Lighthouse", "RBAC/IAM", "Budget Management", "Monitoring",
+            "Disaster Recovery", "Automation"
         ];
-
+    
         container.innerHTML = skills.map(skill => 
             `<div class="skill-item">${skill}</div>`
         ).join('');
