@@ -16,3 +16,21 @@
     "experience": "Expérience",
     "projects": "Projets",
     "skills": "Compétences",
+    
+    "experience_title": "Expérience Professionnelle",
+    "projects_title": "Projets Sélectionnés",
+    "skills_title": "Compétences Techniques", 
+    "certifications_title": "Certifications & Formation",
+    
+    "bio_text": "Consultant Azure Cloud et Ingénieur DevOps expérimenté avec 6+ années d'expérience en infrastructure cloud, automatisation et solutions data science. Spécialisé dans les migrations Azure, pipelines CI/CD et l'intégration IA avec un historique éprouvé en optimisation des coûts et amélioration des performances.",
+    
+    "filter_all": "Tous",
+    "filter_azure": "Azure",
+    "filter_devops": "DevOps", 
+    "filter_ai": "IA/ML",
+    "filter_data": "Data Science",
+    
+    "view_project": "Voir le Projet",
+    "view_code": "Voir le Code", 
+    "download_cv": "Télécharger CV"
+}
