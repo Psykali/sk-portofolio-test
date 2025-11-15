@@ -1,70 +1,68 @@
 class Portfolio {
     constructor() {
-        this.currentLang = 'en';
-        this.config = {};
+        this.currentTheme = 'dark';
         this.init();
     }
 
     async init() {
-        await this.loadConfig();
-        this.setupLanguageSwitcher();
-        this.updateContent();
+        this.setupThemeToggle();
+        this.loadThemePreference();
+        this.setupSmoothScrolling();
     }
 
-    async loadConfig() {
-        try {
-            const response = await fetch(`config/${this.currentLang}.json`);
-            this.config = await response.json();
-        } catch (error) {
-            console.error('Error loading config:', error);
+    setupThemeToggle() {
+        const themeToggle = document.querySelector('.theme-toggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                this.toggleTheme();
+            });
         }
     }
 
-    setupLanguageSwitcher() {
-        document.getElementById('lang-en').addEventListener('click', () => {
-            this.switchLanguage('en');
-        });
-        document.getElementById('lang-fr').addEventListener('click', () => {
-            this.switchLanguage('fr');
-        });
-    }
-
-    async switchLanguage(lang) {
-        this.currentLang = lang;
-        await this.loadConfig();
-        this.updateContent();
-    }
-
-    updateContent() {
-        // Update page title
-        document.title = this.config.site.title;
-
-        // Update hero section
-        document.getElementById('hero-name').textContent = this.config.personal.name;
-        document.getElementById('hero-title').textContent = this.config.personal.title;
+    toggleTheme() {
+        this.currentTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', this.currentTheme);
         
-        // Update contact info
-        const contact = this.config.personal.contact;
-        document.getElementById('hero-contact').innerHTML = `
-            <p>${contact.email} | ${contact.phone} | ${contact.location}</p>
-            <div class="social-links">
-                <a href="${contact.linkedin}" target="_blank">LinkedIn</a>
-                <a href="${contact.github}" target="_blank">GitHub</a>
-            </div>
-        `;
+        // Update theme icon
+        const themeIcon = document.querySelector('.theme-toggle i');
+        if (themeIcon) {
+            themeIcon.className = this.currentTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+        }
+        
+        // Save preference
+        localStorage.setItem('portfolio-theme', this.currentTheme);
+    }
 
-        // Update section titles
-        document.getElementById('about-title').textContent = this.config.sections.about;
-        document.getElementById('experience-title').textContent = this.config.sections.experience;
-        document.getElementById('projects-title').textContent = this.config.sections.projects;
-        document.getElementById('certifications-title').textContent = this.config.sections.certifications;
+    loadThemePreference() {
+        const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+        this.currentTheme = savedTheme;
+        document.documentElement.setAttribute('data-theme', this.currentTheme);
+        
+        // Update theme icon
+        const themeIcon = document.querySelector('.theme-toggle i');
+        if (themeIcon) {
+            themeIcon.className = this.currentTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+        }
+    }
 
-        // Update bio
-        document.getElementById('about-bio').textContent = this.config.personal.bio;
+    setupSmoothScrolling() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
     }
 }
 
 // Initialize portfolio when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new Portfolio();
+    window.portfolio = new Portfolio();
+    window.languageManager = new LanguageManager();
 });
