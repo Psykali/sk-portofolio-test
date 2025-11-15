@@ -6,23 +6,54 @@ portfolio/
 │   ├── en.json
 │   └── fr.json
 ├── css/
-│   └── style.css
+│   ├── style.css
+│   └── tech-theme.css
 ├── js/
 │   ├── main.js
 │   ├── projects-loader.js
-│   └── cv-loader.js
+│   ├── cv-loader.js
+│   └── language-manager.js
 ├── projects/
 │   ├── hardis-group/
-│   │   ├── config.json
-│   │   └── project-details.html
-│   ├── gl-events/
-│   │   ├── config.json
-│   │   └── project-details.html
+│   │   ├── cost-optimization/
+│   │   │   ├── config.json
+│   │   │   ├── project-details.html
+│   │   │   └── images/
+│   │   ├── dashboard-development/
+│   │   │   ├── config.json
+│   │   │   └── project-details.html
+│   │   └── cicd-improvement/
+│   │       ├── config.json
+│   │       └── project-details.html
 │   ├── blue-soft-empower/
-│   │   ├── config.json
-│   │   └── project-details.html
-│   └── eiffage-construction/
-│       ├── config.json
-│       └── project-details.html
-└── assets/
-    └── images/
+│   │   ├── azure-devops-migration/
+│   │   │   ├── config.json
+│   │   │   └── project-details.html
+│   │   └── ai-kubernetes-deployment/
+│   │       ├── config.json
+│   │       └── project-details.html
+│   ├── gl-events/
+│   │   └── cicd-automation/
+│   │       ├── config.json
+│   │       └── project-details.html
+│   └── freelance/
+│       ├── eiffage-construction/
+│       │   ├── config.json
+│       │   └── project-details.html
+│       └── jsi-council/
+│           ├── config.json
+│           └── project-details.html
+├── assets/
+│   ├── icons/
+│   │   ├── linkedin.svg
+│   │   ├── github.svg
+│   │   ├── gitlab.svg
+│   │   ├── medium.svg
+│   │   ├── email.svg
+│   │   └── kaggle.svg
+│   └── images/
+└── data/
+    ├── experience-en.json
+    ├── experience-fr.json
+    ├── certifications-en.json
+    └── certifications-fr.json
