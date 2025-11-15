@@ -1,11 +1,4 @@
-:root {
-    --primary-color: #0078d4;
-    --secondary-color: #005a9e;
-    --background-color: #f5f5f5;
-    --text-color: #333;
-    --border-color: #ddd;
-}
-
+/* Base styles and resets */
 * {
     margin: 0;
     padding: 0;
@@ -15,8 +8,9 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: var(--light);
+    background-color: var(--dark);
+    overflow-x: hidden;
 }
 
 .container {
@@ -25,224 +19,22 @@ body {
     padding: 0 20px;
 }
 
-/* Header & Navigation */
-header {
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+/* Utility classes */
+.hidden {
+    display: none !important;
 }
 
-nav {
-    display: flex;
-    justify-content: flex-end;
-    padding: 1rem 2rem;
-}
-
-.lang-switcher button {
-    background: none;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 0.5rem 1rem;
-    margin-left: 0.5rem;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.lang-switcher button:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* Hero Section */
-#hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 120px 0 60px;
+.text-center {
     text-align: center;
 }
 
-#hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
 
-#hero h2 {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    font-weight: 300;
-}
-
-.social-links a {
-    color: white;
-    margin: 0 1rem;
-    text-decoration: none;
-}
-
-/* Sections */
-section {
-    padding: 60px 0;
-}
-
-section:nth-child(even) {
-    background-color: white;
-}
-
-h2 {
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-/* Experience Section */
-.experience-item {
-    background: white;
-    margin-bottom: 2rem;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border-left: 4px solid var(--primary-color);
-}
-
-.experience-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-}
-
-.experience-header h3 {
-    color: var(--primary-color);
-}
-
-.period {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-}
-
-.technologies, .context {
-    margin-bottom: 1rem;
-}
-
-.achievements ul {
-    margin-left: 1.5rem;
-}
-
-.company-projects {
-    margin-top: 1rem;
-}
-
-.project-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.project-link {
-    background-color: var(--background-color);
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-}
-
-.project-link:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* Projects Grid */
-#projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.project-meta {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-    color: #666;
-}
-
-.tech-tag {
-    background-color: var(--background-color);
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    display: inline-block;
-}
-
-/* Certifications Section */
-#certifications-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.certifications, .education {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.certifications h4, .education h4 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.certifications ul, .education ul {
-    list-style-position: inside;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #hero h1 {
-        font-size: 2rem;
-    }
-    
-    .experience-header {
-        flex-direction: column;
-    }
-    
-    .period {
-        margin-top: 0.5rem;
-    }
-    
-    #certifications-list {
-        grid-template-columns: 1fr;
-    }
-    
-    #projects-grid {
-        grid-template-columns: 1fr;
-    }
+/* Section spacing */
+.tech-section {
+    position: relative;
+    padding: 100px 0;
 }
