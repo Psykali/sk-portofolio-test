@@ -1,0 +1,20 @@
+{
+  "id": "cost-optimization",
+  "title": "Cloud Cost Optimization",
+  "company": "Hardis Group",
+  "client": "Multiple Clients",
+  "period": "2023",
+  "technologies": ["Azure Cost Management", "PowerShell", "Azure Policies", "Budget Alerts"],
+  "description": "Comprehensive cloud cost optimization initiative across multiple client environments",
+  "achievements": [
+    "Reduced cloud waste by 25% through automated budget alerts",
+    "Implemented resource tagging strategy for cost allocation",
+    "Optimized VM sizing and auto-scaling configurations"
+  ],
+  "metrics": [
+    "25% reduction in cloud spending",
+    "40% improvement in cost visibility",
+    "Automated monthly cost reporting"
+  ],
+  "tags": ["azure", "cost-optimization", "automation", "governance"]
+}
