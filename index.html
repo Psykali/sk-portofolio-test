@@ -3,149 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S. Khalifa Portfolio - Data Scientist & DevOps Engineer</title>
-    <link rel="icon" href="📌" type="image/x-icon">
+    <title>S. Khalifa - Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">S. Khalifa</div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <header>
+        <nav>
+            <div class="lang-switcher">
+                <button id="lang-en">EN</button>
+                <button id="lang-fr">FR</button>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Main Content -->
-    <main class="container">
+    <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <h1 class="hero-title">👋 Hi, I'm <span class="highlight">S. Khalifa</span></h1>
-            <h3 class="hero-subtitle">Data Scientist & DevOps Engineer</h3>
-            <p class="hero-description">
-                I solve real-world problems using machine learning, automation, and scalable cloud infrastructure. 
-                Currently focused on AI agents, predictive systems, and DevOps engineering.
-            </p>
-            <div class="hero-tags">
-                🧠 AI & ML • ☁️ Azure Cloud • 🔧 DevOps • 📊 Data Science & Analysis
+        <section id="hero">
+            <div class="container">
+                <h1 id="hero-name">S. Khalifa</h1>
+                <h2 id="hero-title">Azure Cloud / DevOps Consultant</h2>
+                <div id="hero-contact"></div>
             </div>
         </section>
 
-        <!-- About Me Section -->
-        <section class="about-section">
-            <h2>👤 About Me</h2>
-            <div class="about-content">
-                <p>
-                    I'm a <strong>Data Scientist & AI/ML Engineer</strong> with deep expertise in <strong>DevOps</strong>, 
-                    <strong>CloudOps</strong>, and production-grade automation. I architect, build, and run systems that 
-                    transform data into value — securely, at scale, and with minimum friction.
-                </p>
-
-                <div class="expertise-section">
-                    <h3>🔍 Data Science & Analysis</h3>
-                    <p>
-                        I design machine learning models for forecasting, optimization, and automation. From raw data 
-                        wrangling to feature engineering and model deployment — I work across the full lifecycle using 
-                        <strong>Python</strong>, <strong>Pandas</strong>, <strong>Scikit-learn</strong>, 
-                        <strong>TensorFlow</strong>, and visualization tools like <strong>Power BI</strong> and 
-                        <strong>Matplotlib</strong>.
-                    </p>
-                    <p>I've developed solutions for:</p>
-                    <ul>
-                        <li>Stock and sales forecasting</li>
-                        <li>Material demand prediction in construction</li>
-                        <li>Resource optimization across distributed systems</li>
-                    </ul>
-                    <p>
-                        📊 My approach combines statistical rigor with real-world business context — helping teams 
-                        make decisions backed by data, not just instinct.
-                    </p>
-                </div>
-
-                <div class="expertise-section">
-                    <h3>🔧 DevOps & Cloud Architecture</h3>
-                    <p>
-                        I've built cloud-native systems on <strong>Azure</strong>, automated infrastructure with 
-                        <strong>Terraform</strong> & <strong>Ansible</strong>, and optimized CI/CD using 
-                        <strong>GitHub Actions</strong>, <strong>Azure DevOps</strong>, and <strong>GitLab</strong>.
-                    </p>
-                    <p>Highlights:</p>
-                    <ul>
-                        <li>Provisioned and managed 300+ servers</li>
-                        <li>Built hybrid infrastructure for live ML model serving</li>
-                        <li>Secured cloud environments using <strong>RBAC</strong>, <strong>Vault</strong>, and 
-                            <strong>Azure Lighthouse</strong></li>
-                    </ul>
-                    <p>
-                        ☁️ I don't just build models — I ensure they're deployed, monitored, and cost-efficient 
-                        in production.
-                    </p>
-                </div>
-
-                <p class="philosophy">
-                    🧪 I believe in using data not just to analyze the past, but to build the future.
-                </p>
-
-                <p>
-                    🌍 I've worked with companies like <strong>Eiffage</strong>, <strong>JSI Council</strong>, 
-                    <strong>Rexel</strong>, <strong>Hardis Group</strong>, <strong>GL Events</strong>, 
-                    <strong>Energizer</strong>, and others — across France, Egypt, Türkiye and Saudi Arabia.
-                </p>
-
-                <div class="credentials">
-                    <p><strong>Languages:</strong> 🇬🇧 English | 🇫🇷 French | 🇸🇦 Arabic</p>
-                    <p><strong>Certifications:</strong> AZ-104, AZ-500, AI-900, and more</p>
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2 id="about-title">About Me</h2>
+                <p id="about-bio"></p>
+                
+                <!-- Certifications & Education -->
+                <div id="certifications-section">
+                    <h3 id="certifications-title">Certifications & Education</h3>
+                    <div id="certifications-list"></div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="contact-section">
-            <h2>📬 Get in Touch</h2>
-            <div class="contact-buttons">
-                <a href="mailto:siefkhalefa@gmail.com" class="contact-btn gmail-btn" target="_blank">
-                    📧 Gmail
-                </a>
-                <a href="https://www.linkedin.com/in/sief-m-khalifa/" class="contact-btn linkedin-btn" target="_blank">
-                    💼 LinkedIn
-                </a>
-                <a href="https://github.com/Psykali" class="contact-btn github-btn" target="_blank">
-                    💻 GitHub
-                </a>
-                <a href="https://medium.com/@SKpsyktechdynamo" class="contact-btn medium-btn" target="_blank">
-                    ✍️ Medium
-                </a>
-                <a href="CV/S_KHALIFA-CV.pdf" class="contact-btn cv-btn" download>
-                    📄 Download CV
-                </a>
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="container">
+                <h2 id="experience-title">Professional Experience</h2>
+                <div id="experience-list"></div>
             </div>
         </section>
 
-        <!-- Featured Work Preview -->
-        <section class="featured-section">
-            <h2>🚀 Featured Work</h2>
-            <p class="featured-description">
-                Explore my projects showcasing machine learning, cloud infrastructure, and automation solutions.
-            </p>
-            <a href="projects.html" class="btn-primary">View All Projects →</a>
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <h2 id="projects-title">Projects</h2>
+                <div id="projects-grid"></div>
+            </div>
         </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>Let's build something awesome together. 🚀</p>
-            <p class="footer-small">© 2025 S. Khalifa. All rights reserved.</p>
-        </footer>
     </main>
 
-    <script src="javascript/main.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cv-loader.js"></script>
+    <script src="js/projects-loader.js"></script>
 </body>
 </html>
