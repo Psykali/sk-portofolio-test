@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S. Khalifa - Azure Cloud & DevOps Consultant</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/tech-theme.css">
+    <link rel="stylesheet" href="css/tech-globe.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -46,6 +47,14 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="tech-hero">
+            <div class="particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-badge">
@@ -97,16 +106,23 @@
                         </a>
                     </div>
                 </div>
+                
                 <div class="hero-visual">
                     <div class="tech-sphere">
-                        <div class="sphere-layer"></div>
-                        <div class="floating-tech">
-                            <span class="tech-item">Azure</span>
-                            <span class="tech-item">DevOps</span>
-                            <span class="tech-item">Kubernetes</span>
-                            <span class="tech-item">Terraform</span>
-                            <span class="tech-item">Python</span>
-                            <span class="tech-item">AI/ML</span>
+                        <div class="sphere-container">
+                            <div class="sphere-core"></div>
+                            <div class="sphere-orbits">
+                                <div class="orbit orbit-1"></div>
+                                <div class="orbit orbit-2"></div>
+                                <div class="orbit orbit-3"></div>
+                            </div>
+                            <div class="tech-connections"></div>
+                            <div class="tech-node node-1">Azure</div>
+                            <div class="tech-node node-2">DevOps</div>
+                            <div class="tech-node node-3">Kubernetes</div>
+                            <div class="tech-node node-4">Terraform</div>
+                            <div class="tech-node node-5">Python</div>
+                            <div class="tech-node node-6">AI/ML</div>
                         </div>
                     </div>
                 </div>
@@ -158,11 +174,11 @@
             <div class="container">
                 <h2 class="section-title" data-i18n="projects_title">Featured Projects</h2>
                 <div class="projects-filter">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="azure">Azure</button>
-                    <button class="filter-btn" data-filter="devops">DevOps</button>
-                    <button class="filter-btn" data-filter="ai">AI/ML</button>
-                    <button class="filter-btn" data-filter="data">Data Science</button>
+                    <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+                    <button class="filter-btn" data-filter="azure" data-i18n="filter_azure">Azure</button>
+                    <button class="filter-btn" data-filter="devops" data-i18n="filter_devops">DevOps</button>
+                    <button class="filter-btn" data-filter="ai" data-i18n="filter_ai">AI/ML</button>
+                    <button class="filter-btn" data-filter="data" data-i18n="filter_data">Data Science</button>
                 </div>
                 <div id="projects-grid" class="projects-grid"></div>
             </div>
