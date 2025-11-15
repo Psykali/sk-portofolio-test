@@ -133,3 +133,51 @@
     width: 52px; height: 52px;
     font-size: 0.65rem;
 }
+/* Enhanced Text Fit for Planets */
+.planet-core {
+    /* Ensure text fits perfectly */
+    word-break: break-word;
+    hyphens: auto;
+    letter-spacing: -0.02em;
+}
+
+/* Specific text optimizations for longer words */
+.planet-3 .planet-core,
+.planet-9 .planet-core,
+.planet-11 .planet-core,
+.planet-18 .planet-core {
+    font-size: 0.55rem;
+    padding: 2px;
+}
+
+/* For very short text (2-3 characters) */
+.planet-5 .planet-core,
+.planet-12 .planet-core,
+.planet-13 .planet-core,
+.planet-19 .planet-core,
+.planet-20 .planet-core {
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+/* Medium length text optimization */
+.planet-1 .planet-core,
+.planet-2 .planet-core,
+.planet-4 .planet-core,
+.planet-6 .planet-core,
+.planet-7 .planet-core,
+.planet-8 .planet-core,
+.planet-10 .planet-core,
+.planet-14 .planet-core,
+.planet-17 .planet-core {
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+/* Service nodes text optimization */
+.service-node {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 6px 10px;
+    min-width: 45px;
+}
