@@ -1,25 +1,18 @@
 {
-  "site": {
-    "title": "S. Khalifa - Consultant Azure Cloud & DevOps",
-    "description": "Consultant Azure Cloud expérimenté, Ingénieur DevOps avec expertise en Data Science, Solutions IA et Infrastructure Cloud"
-  },
-  "personal": {
-    "name": "S. Khalifa",
-    "title": "Consultant Azure Cloud / DevOps & Ingénieur Data Science",
-    "bio": "6+ années d'expérience en infrastructure cloud Azure, pratiques DevOps et solutions data science. Spécialisé dans la migration cloud, l'automatisation et l'intégration IA.",
-    "contact": {
-      "email": "siefkhalefa@gmail.com",
-      "phone": "+33 6 13 57 91 22",
-      "location": "Feyzin, France",
-      "linkedin": "https://linkedin.com/in/sief-m-khalifa",
-      "github": "https://github.com/Psykali"
-    }
-  },
-  "sections": {
-    "about": "À Propos",
-    "experience": "Expérience Professionnelle",
+    "site_title": "S. Khalifa - Consultant Azure Cloud & DevOps",
+    "site_description": "Consultant Azure Cloud expérimenté, Ingénieur DevOps avec expertise en Data Science, Solutions IA et Infrastructure Cloud",
+    
+    "hero_badge": "Consultant Azure Cloud",
+    "hero_title": "Ingénieur DevOps & Spécialiste Data Science", 
+    "hero_description": "6+ années d'expérience dans la transformation d'infrastructures cloud avec Azure, l'automatisation DevOps et les solutions IA",
+    
+    "nav_guide_title": "Explorez Mon Portfolio",
+    "guide_step1": "Voir mon expérience professionnelle",
+    "guide_step2": "Parcourir les projets techniques",
+    "guide_step3": "Télécharger mon CV",
+    
+    "about_title": "À Propos",
+    "about": "À Propos", 
+    "experience": "Expérience",
     "projects": "Projets",
-    "certifications": "Certifications & Formation",
-    "skills": "Compétences Techniques"
-  }
-}
+    "skills": "Compétences",
