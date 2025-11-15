@@ -3,60 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S. Khalifa - Portfolio</title>
+    <title>S. Khalifa - Azure Cloud & DevOps Consultant</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tech-theme.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="grid-lines"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
+
     <header>
-        <nav>
-            <div class="lang-switcher">
-                <button id="lang-en">EN</button>
-                <button id="lang-fr">FR</button>
+        <nav class="tech-nav">
+            <div class="nav-brand">
+                <div class="logo">SK</div>
+                <span class="brand-text">Cloud Portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link"><i class="fas fa-user"></i> <span data-i18n="about">About</span></a>
+                <a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> <span data-i18n="experience">Experience</span></a>
+                <a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> <span data-i18n="projects">Projects</span></a>
+                <a href="#skills" class="nav-link"><i class="fas fa-code"></i> <span data-i18n="skills">Skills</span></a>
+            </div>
+            <div class="nav-controls">
+                <div class="lang-switcher">
+                    <button id="lang-en" class="lang-btn active">EN</button>
+                    <button id="lang-fr" class="lang-btn">FR</button>
+                </div>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
             </div>
         </nav>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section id="hero">
+        <section id="hero" class="tech-hero">
             <div class="container">
-                <h1 id="hero-name">S. Khalifa</h1>
-                <h2 id="hero-title">Azure Cloud / DevOps Consultant</h2>
-                <div id="hero-contact"></div>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-text" data-i18n="hero_badge">Azure Cloud Consultant</span>
+                    </div>
+                    <h1 class="hero-name">S. KHALIFA</h1>
+                    <h2 class="hero-title" data-i18n="hero_title">DevOps Engineer & Data Science Specialist</h2>
+                    <p class="hero-description" data-i18n="hero_description">
+                        6+ years transforming cloud infrastructure with Azure, DevOps automation, and AI solutions
+                    </p>
+                    
+                    <!-- Navigation Guide -->
+                    <div class="nav-guide">
+                        <h3 data-i18n="nav_guide_title">Explore My Portfolio</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <i class="fas fa-user-tie"></i>
+                                <span data-i18n="guide_step1">View my professional experience</span>
+                            </div>
+                            <div class="guide-step">
+                                <i class="fas fa-project-diagram"></i>
+                                <span data-i18n="guide_step2">Browse technical projects</span>
+                            </div>
+                            <div class="guide-step">
+                                <i class="fas fa-download"></i>
+                                <span data-i18n="guide_step3">Download my CV</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-contact">
+                        <a href="mailto:siefkhalefa@gmail.com" class="contact-icon" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/sief-m-khalifa" target="_blank" class="contact-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Psykali" target="_blank" class="contact-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://medium.com/@SKpsyktechdynamo" target="_blank" class="contact-icon" title="Medium">
+                            <i class="fab fa-medium"></i>
+                        </a>
+                        <a href="https://gitlab.com/your-profile" target="_blank" class="contact-icon" title="GitLab">
+                            <i class="fab fa-gitlab"></i>
+                        </a>
+                        <a href="https://kaggle.com/skhalifa01" target="_blank" class="contact-icon" title="Kaggle">
+                            <i class="fab fa-kaggle"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="tech-sphere">
+                        <div class="sphere-layer"></div>
+                        <div class="floating-tech">
+                            <span class="tech-item">Azure</span>
+                            <span class="tech-item">DevOps</span>
+                            <span class="tech-item">Kubernetes</span>
+                            <span class="tech-item">Terraform</span>
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">AI/ML</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about">
+        <section id="about" class="tech-section">
             <div class="container">
-                <h2 id="about-title">About Me</h2>
-                <p id="about-bio"></p>
-                
-                <!-- Certifications & Education -->
-                <div id="certifications-section">
-                    <h3 id="certifications-title">Certifications & Education</h3>
-                    <div id="certifications-list"></div>
+                <h2 class="section-title" data-i18n="about_title">About Me</h2>
+                <div class="about-content">
+                    <div class="bio-card">
+                        <p class="bio-text" data-i18n="bio_text">
+                            Experienced Azure Cloud Consultant and DevOps Engineer with 6+ years in cloud infrastructure, 
+                            automation, and data science solutions. Specialized in Azure migrations, CI/CD pipelines, 
+                            and AI integration with proven track record in cost optimization and performance improvement.
+                        </p>
+                    </div>
+                    
+                    <!-- Certifications & Education -->
+                    <div id="certifications-section" class="certifications-grid">
+                        <h3 data-i18n="certifications_title">Certifications & Education</h3>
+                        <div id="certifications-list"></div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Experience Section -->
-        <section id="experience">
+        <section id="experience" class="tech-section">
             <div class="container">
-                <h2 id="experience-title">Professional Experience</h2>
-                <div id="experience-list"></div>
+                <h2 class="section-title" data-i18n="experience_title">Professional Experience</h2>
+                <div class="timeline">
+                    <div id="experience-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="tech-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="skills_title">Technical Skills</h2>
+                <div id="skills-cloud"></div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects">
+        <section id="projects" class="tech-section">
             <div class="container">
-                <h2 id="projects-title">Projects</h2>
-                <div id="projects-grid"></div>
+                <h2 class="section-title" data-i18n="projects_title">Featured Projects</h2>
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="azure">Azure</button>
+                    <button class="filter-btn" data-filter="devops">DevOps</button>
+                    <button class="filter-btn" data-filter="ai">AI/ML</button>
+                    <button class="filter-btn" data-filter="data">Data Science</button>
+                </div>
+                <div id="projects-grid" class="projects-grid"></div>
             </div>
         </section>
     </main>
 
+    <footer class="tech-footer">
+        <div class="container">
+            <p>&copy; 2024 S. Khalifa - Azure Cloud & DevOps Consultant</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/language-manager.js"></script>
     <script src="js/main.js"></script>
     <script src="js/cv-loader.js"></script>
     <script src="js/projects-loader.js"></script>
