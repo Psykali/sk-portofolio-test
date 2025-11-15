@@ -3,34 +3,85 @@
         {
             "id": "blue-soft-empower",
             "company": "Blue Soft Empower",
-            "position": "Consultant Azure Cloud / DevOps", 
+            "position": "Consultant Azure Cloud / DevOps",
             "period": "Août 2025 - Présent",
             "duration": "Actuel",
-            "technologies": ["Azure Cloud", "IA", "Python", "Docker", "Kubernetes", "Terraform", "Azure DevOps", "YAML", "Bash"],
-            "context": "Gestion d'infrastructure Azure, déploiement de solutions IA et implémentation DevOps pour divers clients incluant des projets de migration et des déploiements Kubernetes.",
+            "technologies": ["Azure Cloud", "IA", "Python", "Docker", "Kubernetes", "Terraform", "Azure DevOps", "YAML", "Bash", "PowerShell", "Entra ID", "Key Vault"],
+            "context": "Gestion d'infrastructure Azure, déploiement de solutions IA et implémentation DevOps pour clients entreprises avec focus sur projets de migration et déploiements Kubernetes.",
             "achievements": [
                 "Migration de JIRA vers Azure DevOps via scripts personnalisés et outils d'intégration",
                 "Déploiement de solutions IA (Prisme, Azure AI, OpenAI) sur Kubernetes via Terraform et Azure DevOps",
                 "Implémentation d'infrastructure AVD Windows avec applications multiples en Infrastructure as Code",
-                "Création d'une Forge DevOps standardisée pour les déploiements automatisés centralisés"
+                "Création d'une Forge DevOps standardisée pour les déploiements automatisés centralisés",
+                "Gestion d'Entra ID (comptes utilisateurs, groupes et SPN) et configuration d'intégration Key Vault"
             ],
-            "projects": ["azure-devops-migration", "ai-kubernetes-deployment", "avd-implementation"]
+            "projects": ["azure-devops-migration", "ai-kubernetes-deployment", "avd-implementation", "devops-forge"]
+        },
+        {
+            "id": "freelance",
+            "company": "Consultant Indépendant",
+            "position": "Data Scientist & Ingénieur ML",
+            "period": "Jan 2025 - Août 2025",
+            "duration": "8 mois",
+            "technologies": ["Python", "Machine Learning", "FastAPI", "Streamlit", "Power BI", "SQL", "Revit API", "Analyse de Données"],
+            "context": "Consulting data science et machine learning pour secteurs construction et retail, développement de modèles prédictifs et plateformes données.",
+            "achievements": [
+                "Développé modèle de prévision des stocks améliorant la précision de 18% pour JSI Council",
+                "Créé plateforme Streamlit pour interaction temps réel avec modèles prédictifs",
+                "Amélioré prévision demande matériaux, augmentant efficacité planification construction",
+                "Connecté FastAPI avec Revit pour traitement et récupération données transparents"
+            ],
+            "projects": ["jsi-inventory-forecasting", "eiffage-dashboard", "construction-ml-pipeline"]
+        },
+        {
+            "id": "gl-events",
+            "company": "GL events",
+            "position": "Consultant Azure Cloud / DevOps",
+            "period": "Juin 2024 - Déc 2024",
+            "duration": "7 mois",
+            "technologies": ["Azure DevOps", "Terraform", "Ansible", "Docker", "Kubernetes", "Harbor", "HashiCorp Vault", "CI/CD", "Linux", "Windows"],
+            "context": "Implémentation DevOps et automatisation cloud pour infrastructure gestion d'événements.",
+            "achievements": [
+                "Réduction cycles déploiement de 30% via implémentation pipelines CI/CD",
+                "Diminué temps configuration environnements de 40% sur 350+ serveurs avec Terraform et Ansible",
+                "Atteint 98% taux réussite déploiement avec pipelines Azure DevOps intégrés",
+                "Formé 3 membres équipe opérationnelle sur intégration DevOps et gestion pipelines"
+            ],
+            "projects": ["cicd-automation", "terraform-ansible-scripts", "team-training"]
         },
         {
             "id": "hardis-group",
-            "company": "Hardis Group", 
+            "company": "Hardis Group",
             "position": "Consultant Azure Cloud / DevOps",
-            "period": "Nov 2022 - Juin 2024",
-            "duration": "1.5 ans",
-            "technologies": ["Azure Cloud", "Docker", "Kubernetes", "SQL", "Azure DevOps", "GitLab", "PowerShell", "Azure Lighthouse"],
-            "context": "Conseil cloud pour multiples clients entreprises via Hardis Group (ESN), concentration sur l'optimisation des coûts, monitoring et pratiques DevOps.",
+            "period": "Jan 2022 - Juin 2024",
+            "duration": "2.5 ans",
+            "technologies": ["Azure Cloud", "Docker", "Kubernetes", "SQL", "Azure DevOps", "GitLab", "PowerShell", "Azure Lighthouse", "FinOps", "RBAC/IAM"],
+            "context": "Conseil cloud pour multiples clients entreprises via Hardis Group (ESN), concentration sur optimisation coûts, monitoring et pratiques DevOps.",
             "achievements": [
-                "Réduction des coûts cloud de 25% via alertes budgétaires et stratégies de tagging",
-                "Amélioration de la visibilité des données de 30% avec classeurs et tableaux de bord personnalisés",
-                "Réduction des erreurs de déploiement de 20% pour 30+ applications utilisant Azure DevOps et GitLab",
-                "Implémentation d'Azure Lighthouse et Policies pour la gestion multi-locataire"
+                "Réduction coûts cloud de 25% via alertes budgétaires et stratégies tagging",
+                "Amélioration visibilité données de 30% avec classeurs et tableaux de bord personnalisés",
+                "Réduction erreurs déploiement de 20% pour 30+ applications utilisant Azure DevOps et GitLab",
+                "Implémentation Azure Lighthouse et Policies pour gestion multi-locataire",
+                "Formé 2 stagiaires sur fondamentaux Azure menant à initiative optimisation coûts réussie"
             ],
-            "projects": ["cost-optimization", "dashboard-development", "cicd-improvement"]
+            "projects": ["cost-optimization", "dashboard-development", "cicd-improvement", "azure-governance"]
+        },
+        {
+            "id": "itsense",
+            "company": "ITsense SAS",
+            "position": "Ingénieur DevOps",
+            "period": "Jan 2019 - Déc 2021",
+            "duration": "3 ans",
+            "technologies": ["Linux", "Windows", "Docker", "Proxmox", "SQL", "MariaDB", "Bash", "Ansible", "PowerShell", "OpenVPN", "Centreon"],
+            "context": "Administration système et ingénierie DevOps pour environnements cloud privés, OVH et hybrides avec focus virtualisation et automatisation.",
+            "achievements": [
+                "Atteint 99% disponibilité applications critiques clients via optimisation SQL/MariaDB",
+                "Automatisé 40% charge travail manuelle utilisant Bash, Ansible et PowerShell",
+                "Migré 50+ serveurs vers Proxmox, améliorant efficacité ressources de 30%",
+                "Sécurisé accès distant pour 50+ employés avec OpenVPN",
+                "Membre équipe plan reprise activité lors incendie datacenter OVH Strasbourg"
+            ],
+            "projects": ["server-migration", "automation-scripts", "monitoring-dashboards", "disaster-recovery"]
         }
     ]
 }
