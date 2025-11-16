@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="css/tech-globe.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Additional styles for horizontal layout */
+        /* Additional styles for horizontal layout and timeline improvements */
         .certifications-education {
             display: flex;
-            flex-wrap: wrap;
             gap: 40px;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
         
         .certifications, .education {
@@ -24,7 +24,7 @@
         
         .cert-list, .edu-list {
             list-style-type: none;
-            padding: 0;
+            padding-left: 0;
         }
         
         .cert-list li, .edu-list li {
@@ -41,7 +41,6 @@
             left: 0;
         }
         
-        /* Wider experience section */
         .experience-content {
             max-width: 100%;
             line-height: 1.7;
@@ -64,6 +63,23 @@
         .company {
             font-weight: 500;
             color: #0078d4;
+        }
+        
+        .job-period {
+            color: #666;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .duration-badge {
+            background-color: #eef5ff;
+            color: #0078d4;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            border: 1px solid #d0e3ff;
         }
         
         .responsibilities {
@@ -103,6 +119,26 @@
             border-radius: 20px;
             font-size: 0.85rem;
             border: 1px solid #d0e3ff;
+        }
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #0078d4;
+            text-decoration: none;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Timeline improvements */
+        .timeline-item {
+            width: 100%;
+            margin-bottom: 30px;
         }
         
         @media (max-width: 768px) {
@@ -236,7 +272,7 @@
                             <div class="service-node" data-tooltip="Infrastructure as Code">IaC</div>
                         </div>
                 
-                        <!-- All 20 Technology Planets -->
+                        <!-- All 21 Technology Planets (including the new AI Prompt Engineering) -->
                         <div class="orbit orbit-1">
                             <div class="planet planet-1" data-tooltip="Azure Cloud">
                                 <div class="planet-core">Azure Cloud</div>
@@ -356,6 +392,13 @@
                                 <div class="planet-core">Virtualization</div>
                             </div>
                         </div>
+                        
+                        <!-- NEW: 21st Planet for AI Prompt Engineering -->
+                        <div class="orbit orbit-21">
+                            <div class="planet planet-21" data-tooltip="AI Prompt Engineering">
+                                <div class="planet-core">AI Prompt Engineering</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -374,7 +417,7 @@
                         </p>
                     </div>
                     
-                    <!-- Certifications & Education -->
+                    <!-- Certifications & Education - Horizontal Layout -->
                     <div id="certifications-section" class="certifications-section">
                         <h3 data-i18n="certifications_title">Certifications & Education</h3>
                         <div class="certifications-education">
@@ -382,7 +425,7 @@
                                 <h4>Education</h4>
                                 <ul class="edu-list">
                                     <li>2025 - Master in Data Science & AI - Le Wagon, Lyon</li>
-                                    <li>2022 - Master in Computer Science & Cloud - Simplon.Co, Lyon</li>
+                                    <li>2022 - Master in Computer Science & Cloud - SimplonCo, Lyon</li>
                                 </ul>
                             </div>
                             
@@ -406,33 +449,50 @@
         <section id="experience" class="tech-section">
             <div class="container">
                 <h2 class="section-title" data-i18n="experience_title">Professional Experience</h2>
-                <div class="experience-content">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">Azure Cloud / DevOps Consultant</div>
-                            <div class="company">Blue Soft • Empower</div>
+                <div class="timeline">
+                    <div id="experience-list">
+                        <!-- This will be populated by JavaScript -->
+                        <!-- Example structure for timeline items: -->
+                        <div class="timeline-item">
+                            <div class="experience-content">
+                                <div class="job-header">
+                                    <div>
+                                        <div class="job-title">Azure Cloud / DevOps Consultant</div>
+                                        <div class="company">Blue Soft • Empower</div>
+                                    </div>
+                                    <div class="job-period">
+                                        <span>Jan-2023 → Present</span>
+                                        <span class="duration-badge">1.5 years</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="responsibilities">
+                                    <p>Leading Azure infrastructure management, AI solutions deployment, and DevOps implementation for enterprise clients with focus on migration projects and kubernetes deployments.</p>
+                                    
+                                    <ul>
+                                        <li>Migrated IRA to Azure DevOps using custom scripts and integration tools</li>
+                                        <li>Deployed AI solutions (Prime, Azure AI, OpenAI) on kubernetes via Terraform and Azure DevOps</li>
+                                        <li>Implemented Windows AVD infrastructure with multiple applications using Infrastructure as Code</li>
+                                        <li>Created standardized DevOps pipelines and processes</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="tech-highlights">
+                                    <span class="tech-tag">Azure</span>
+                                    <span class="tech-tag">DevOps</span>
+                                    <span class="tech-tag">Kubernetes</span>
+                                    <span class="tech-tag">Terraform</span>
+                                    <span class="tech-tag">Infrastructure as Code</span>
+                                    <span class="tech-tag">AI Solutions</span>
+                                    <span class="tech-tag">PowerShell</span>
+                                </div>
+                                
+                                <a href="#projects" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Related Projects
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="responsibilities">
-                        <p>Leading Azure infrastructure management, AI solutions deployment, and DevOps implementation for enterprise clients with focus on migration projects and kubernetes deployments.</p>
-                        
-                        <ul>
-                            <li>Migrated IRA to Azure DevOps using custom scripts and integration tools</li>
-                            <li>Deployed AI solutions (Prime, Azure AI, OpenAI) on kubernetes via Terraform and Azure DevOps</li>
-                            <li>Implemented Windows AVD infrastructure with multiple applications using Infrastructure as Code</li>
-                            <li>Created standardized DevOps pipelines and processes</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tech-highlights">
-                        <span class="tech-tag">Azure</span>
-                        <span class="tech-tag">DevOps</span>
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">Terraform</span>
-                        <span class="tech-tag">Infrastructure as Code</span>
-                        <span class="tech-tag">AI Solutions</span>
-                        <span class="tech-tag">PowerShell</span>
                     </div>
                 </div>
             </div>
@@ -473,5 +533,48 @@
     <script src="js/main.js"></script>
     <script src="js/cv-loader.js"></script>
     <script src="js/projects-loader.js"></script>
+    
+    <script>
+        // Function to calculate duration between dates
+        function calculateDuration(startDate, endDate) {
+            const start = new Date(startDate);
+            const end = endDate === 'Present' ? new Date() : new Date(endDate);
+            
+            const years = end.getFullYear() - start.getFullYear();
+            const months = end.getMonth() - start.getMonth();
+            
+            let totalMonths = years * 12 + months;
+            if (end.getDate() < start.getDate()) {
+                totalMonths--;
+            }
+            
+            const yearsDisplay = Math.floor(totalMonths / 12);
+            const monthsDisplay = totalMonths % 12;
+            
+            if (yearsDisplay === 0) {
+                return `${monthsDisplay} month${monthsDisplay !== 1 ? 's' : ''}`;
+            } else if (monthsDisplay === 0) {
+                return `${yearsDisplay} year${yearsDisplay !== 1 ? 's' : ''}`;
+            } else {
+                return `${yearsDisplay} year${yearsDisplay !== 1 ? 's' : ''} ${monthsDisplay} month${monthsDisplay !== 1 ? 's' : ''}`;
+            }
+        }
+        
+        // You would use this function when loading experiences from your data
+        document.addEventListener('DOMContentLoaded', function() {
+            // Example of how to apply duration calculation
+            const experienceElements = document.querySelectorAll('.job-period');
+            experienceElements.forEach(element => {
+                const dateText = element.querySelector('span:first-child').textContent;
+                const [start, end] = dateText.split(' → ');
+                
+                const duration = calculateDuration(start, end);
+                const durationBadge = element.querySelector('.duration-badge');
+                if (durationBadge) {
+                    durationBadge.textContent = duration;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
