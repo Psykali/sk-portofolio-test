@@ -1,0 +1,21 @@
+{
+  "education": [
+    {
+      "year": "2025",
+      "degree": "Master in Data Science & AI",
+      "institution": "Le Wagon, Lyon"
+    },
+    {
+      "year": "2022",
+      "degree": "Master in Computer Science & Cloud",
+      "institution": "SimplonCo, Lyon"
+    }
+  ],
+  "certifications": [
+    "AZ-900: Azure Fundamentals",
+    "AZ-104: Azure Administrator",
+    "AZ-500: Azure Security Engineer",
+    "AI-900: Azure AI Fundamentals",
+    "DP-900: Azure Data Fundamentals"
+  ]
+}
