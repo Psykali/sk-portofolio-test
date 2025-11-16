@@ -26,24 +26,25 @@
     },
     {
       "id": 2,
-      "title": "Cloud Infrastructure Engineer",
-      "company": "Tech Solutions Inc.",
+      "title": "Freelancer & Personal Projects",
+      "company": "Various Clients",
       "period": {
-        "start": "Mar-2021",
+        "start": "Jun-2020",
         "end": "Dec-2022"
       },
-      "description": "Designed and implemented cloud infrastructure solutions for various clients, focusing on scalability and security.",
+      "description": "Worked on various cloud migration and DevOps automation projects for small to medium enterprises, developing innovative solutions and gaining diverse experience.",
       "responsibilities": [
-        "Developed automated deployment pipelines using Azure DevOps",
-        "Implemented monitoring and alerting systems for cloud resources",
-        "Optimized cloud costs through resource management and right-sizing",
-        "Managed containerized applications using Docker and Kubernetes",
-        "Designed and implemented disaster recovery solutions",
-        "Collaborated with development teams to optimize application performance"
+        "Developed automated CI/CD pipelines for web applications",
+        "Implemented cloud security best practices and compliance frameworks",
+        "Created comprehensive monitoring and alerting systems",
+        "Optimized application performance in cloud environments",
+        "Provided technical consultation and architecture design",
+        "Built scalable data processing pipelines"
       ],
       "technologies": [
-        "Azure", "Docker", "Kubernetes", "CI/CD", "Monitoring",
-        "Cost Optimization", "Disaster Recovery", "Security", "Automation"
+        "Azure", "AWS", "Docker", "Kubernetes", "CI/CD",
+        "Security", "Monitoring", "Automation", "Python",
+        "Data Engineering", "Cloud Architecture"
       ],
       "projectLink": "#projects"
     }
