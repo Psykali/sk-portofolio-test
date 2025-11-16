@@ -41,49 +41,60 @@
             left: 0;
         }
         
+        /* WIDE EXPERIENCE SECTION STYLES */
         .experience-content {
             max-width: 100%;
             line-height: 1.7;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid #0078d4;
+            margin-bottom: 30px;
         }
         
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             flex-wrap: wrap;
         }
         
         .job-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #005a9e;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0078d4;
+            margin-bottom: 5px;
         }
         
         .company {
-            font-weight: 500;
-            color: #0078d4;
+            font-weight: 600;
+            color: #ffffff;
+            font-size: 1.1rem;
         }
         
         .job-period {
-            color: #666;
+            color: #cccccc;
             font-style: italic;
             display: flex;
             align-items: center;
             gap: 10px;
+            background: rgba(0, 120, 212, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
         }
         
         .duration-badge {
-            background-color: #eef5ff;
-            color: #0078d4;
-            padding: 3px 8px;
+            background-color: #0078d4;
+            color: white;
+            padding: 4px 10px;
             border-radius: 12px;
             font-size: 0.8rem;
-            border: 1px solid #d0e3ff;
+            font-weight: 600;
         }
         
         .responsibilities {
-            margin-top: 15px;
+            margin-top: 20px;
         }
         
         .responsibilities ul {
@@ -92,9 +103,10 @@
         }
         
         .responsibilities li {
-            margin-bottom: 10px;
-            padding-left: 25px;
+            margin-bottom: 12px;
+            padding-left: 30px;
             position: relative;
+            line-height: 1.6;
         }
         
         .responsibilities li:before {
@@ -102,43 +114,127 @@
             color: #0078d4;
             font-weight: bold;
             position: absolute;
-            left: 10px;
+            left: 15px;
+            font-size: 1.2rem;
         }
         
         .tech-highlights {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 20px;
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .tech-tag {
-            background-color: #eef5ff;
+            background-color: rgba(0, 120, 212, 0.2);
             color: #0078d4;
-            padding: 5px 12px;
+            padding: 6px 14px;
             border-radius: 20px;
             font-size: 0.85rem;
-            border: 1px solid #d0e3ff;
+            border: 1px solid rgba(0, 120, 212, 0.3);
+            font-weight: 500;
         }
         
         .project-link {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
             color: #0078d4;
             text-decoration: none;
-            margin-top: 10px;
-            font-weight: 500;
+            margin-top: 15px;
+            font-weight: 600;
+            padding: 8px 16px;
+            background: rgba(0, 120, 212, 0.1);
+            border-radius: 6px;
+            transition: all 0.3s ease;
         }
         
         .project-link:hover {
-            text-decoration: underline;
+            text-decoration: none;
+            background: rgba(0, 120, 212, 0.2);
+            transform: translateY(-2px);
         }
         
-        /* Timeline improvements */
+        /* TIMELINE STYLES */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #0078d4;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 10px;
+        }
+        
         .timeline-item {
-            width: 100%;
-            margin-bottom: 30px;
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: #0078d4;
+            border: 4px solid #0a192f;
+            top: 30px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -12px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -12px;
+        }
+        
+        /* Responsive timeline */
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item::after {
+                left: 18px;
+            }
+            
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 18px;
+            }
         }
         
         @media (max-width: 768px) {
@@ -149,6 +245,7 @@
             .job-header {
                 flex-direction: column;
                 align-items: flex-start;
+                gap: 10px;
             }
         }
     </style>
@@ -451,8 +548,7 @@
                 <h2 class="section-title" data-i18n="experience_title">Professional Experience</h2>
                 <div class="timeline">
                     <div id="experience-list">
-                        <!-- This will be populated by JavaScript -->
-                        <!-- Example structure for timeline items: -->
+                        <!-- Experience Item 1 -->
                         <div class="timeline-item">
                             <div class="experience-content">
                                 <div class="job-header">
@@ -462,29 +558,74 @@
                                     </div>
                                     <div class="job-period">
                                         <span>Jan-2023 → Present</span>
-                                        <span class="duration-badge">1.5 years</span>
+                                        <span class="duration-badge">1.8 years</span>
                                     </div>
                                 </div>
                                 
                                 <div class="responsibilities">
-                                    <p>Leading Azure infrastructure management, AI solutions deployment, and DevOps implementation for enterprise clients with focus on migration projects and kubernetes deployments.</p>
+                                    <p>Leading Azure infrastructure management, AI solutions deployment, and DevOps implementation for enterprise clients with focus on migration projects and Kubernetes deployments.</p>
                                     
                                     <ul>
-                                        <li>Migrated IRA to Azure DevOps using custom scripts and integration tools</li>
-                                        <li>Deployed AI solutions (Prime, Azure AI, OpenAI) on kubernetes via Terraform and Azure DevOps</li>
+                                        <li>Migrated JIRA to Azure DevOps using custom scripts and integration tools</li>
+                                        <li>Deployed AI solutions (Prisms, Azure AI, OpenAI) on Kubernetes via Terraform and Azure DevOps</li>
                                         <li>Implemented Windows AVD infrastructure with multiple applications using Infrastructure as Code</li>
-                                        <li>Created standardized DevOps pipelines and processes</li>
+                                        <li>Created standardized DevOps Forge</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="tech-highlights">
+                                    <span class="tech-tag">Azure Cloud</span>
+                                    <span class="tech-tag">AI</span>
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Docker</span>
+                                    <span class="tech-tag">Kubernetes</span>
+                                    <span class="tech-tag">Terraform</span>
+                                    <span class="tech-tag">Azure DevOps</span>
+                                    <span class="tech-tag">YAML</span>
+                                    <span class="tech-tag">Bash</span>
+                                    <span class="tech-tag">PowerShell</span>
+                                    <span class="tech-tag">Entra ID</span>
+                                </div>
+                                
+                                <a href="#projects" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Related Projects
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Experience Item 2 -->
+                        <div class="timeline-item">
+                            <div class="experience-content">
+                                <div class="job-header">
+                                    <div>
+                                        <div class="job-title">Cloud Infrastructure Engineer</div>
+                                        <div class="company">Tech Solutions Inc.</div>
+                                    </div>
+                                    <div class="job-period">
+                                        <span>Mar-2021 → Dec-2022</span>
+                                        <span class="duration-badge">1.9 years</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="responsibilities">
+                                    <p>Designed and implemented cloud infrastructure solutions for various clients, focusing on scalability and security.</p>
+                                    
+                                    <ul>
+                                        <li>Developed automated deployment pipelines using Azure DevOps</li>
+                                        <li>Implemented monitoring and alerting systems for cloud resources</li>
+                                        <li>Optimized cloud costs through resource management and right-sizing</li>
+                                        <li>Managed containerized applications using Docker and Kubernetes</li>
                                     </ul>
                                 </div>
                                 
                                 <div class="tech-highlights">
                                     <span class="tech-tag">Azure</span>
-                                    <span class="tech-tag">DevOps</span>
+                                    <span class="tech-tag">Docker</span>
                                     <span class="tech-tag">Kubernetes</span>
-                                    <span class="tech-tag">Terraform</span>
-                                    <span class="tech-tag">Infrastructure as Code</span>
-                                    <span class="tech-tag">AI Solutions</span>
-                                    <span class="tech-tag">PowerShell</span>
+                                    <span class="tech-tag">CI/CD</span>
+                                    <span class="tech-tag">Monitoring</span>
+                                    <span class="tech-tag">Cost Optimization</span>
                                 </div>
                                 
                                 <a href="#projects" class="project-link">
@@ -560,15 +701,18 @@
             }
         }
         
-        // You would use this function when loading experiences from your data
+        // Apply duration calculation to all experience items
         document.addEventListener('DOMContentLoaded', function() {
-            // Example of how to apply duration calculation
             const experienceElements = document.querySelectorAll('.job-period');
             experienceElements.forEach(element => {
                 const dateText = element.querySelector('span:first-child').textContent;
                 const [start, end] = dateText.split(' → ');
                 
-                const duration = calculateDuration(start, end);
+                // Format dates properly for calculation
+                const startDate = new Date(start);
+                const endDate = end === 'Present' ? 'Present' : new Date(end);
+                
+                const duration = calculateDuration(startDate, endDate);
                 const durationBadge = element.querySelector('.duration-badge');
                 if (durationBadge) {
                     durationBadge.textContent = duration;
