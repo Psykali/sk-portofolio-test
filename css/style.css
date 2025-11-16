@@ -1,40 +1,239 @@
-/* Base styles and resets */
-* {
-    margin: 0;
-    padding: 0;
+/* WIDER EXPERIENCE SECTION STYLES */
+.experience-content {
+    width: 98%;
+    max-width: 1600px;
+    line-height: 1.7;
+    padding: 35px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    border-left: 6px solid #0078d4;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.job-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0078d4;
+    margin-bottom: 10px;
+}
+
+.company {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+.job-period {
+    color: #cccccc;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(0, 120, 212, 0.3);
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+}
+
+.duration-badge {
+    background-color: #0078d4;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.responsibilities {
+    margin-top: 30px;
+}
+
+.responsibilities p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #e0e0e0;
+}
+
+.responsibilities ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+}
+
+.responsibilities li {
+    margin-bottom: 18px;
+    padding-left: 40px;
+    position: relative;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.responsibilities li:before {
+    content: "•";
+    color: #0078d4;
+    font-weight: bold;
+    position: absolute;
+    left: 25px;
+    font-size: 1.6rem;
+}
+
+.tech-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-tag {
+    background-color: rgba(0, 120, 212, 0.3);
+    color: #0078d4;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    border: 2px solid rgba(0, 120, 212, 0.5);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background-color: rgba(0, 120, 212, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 120, 212, 0.3);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #0078d4;
+    text-decoration: none;
+    margin-top: 25px;
+    font-weight: 600;
+    padding: 12px 25px;
+    background: rgba(0, 120, 212, 0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.project-link:hover {
+    text-decoration: none;
+    background: rgba(0, 120, 212, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 120, 212, 0.25);
+}
+
+/* Certifications & Education */
+.certifications-education {
+    display: flex;
+    gap: 50px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.certifications, .education {
+    flex: 1;
+    min-width: 350px;
+}
+
+.cert-list, .edu-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.cert-list li, .edu-list li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.cert-list li:before, .edu-list li:before {
+    content: "✓";
+    color: #0078d4;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    background: linear-gradient(to bottom, #0078d4, #00a2ff);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-radius: 12px;
+}
+
+.timeline-item {
+    padding: 20px 60px;
+    position: relative;
+    width: 50%;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--light);
-    background-color: var(--dark);
-    overflow-x: hidden;
+/* Responsive Design */
+@media screen and (max-width: 1400px) {
+    .experience-content {
+        width: 95%;
+        padding: 30px 35px;
+    }
+    
+    .responsibilities ul {
+        grid-template-columns: 1fr;
+    }
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Utility classes */
-.hidden {
-    display: none !important;
-}
-
-.text-center {
-    text-align: center;
-}
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Section spacing */
-.tech-section {
-    position: relative;
-    padding: 100px 0;
+@media screen and (max-width: 768px) {
+    .experience-content {
+        width: 92%;
+        padding: 25px 30px;
+    }
+    
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .job-title {
+        font-size: 1.5rem;
+    }
+    
+    .company {
+        font-size: 1.2rem;
+    }
+    
+    .certifications-education {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
