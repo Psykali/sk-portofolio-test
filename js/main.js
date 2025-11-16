@@ -1,68 +1,58 @@
-class Portfolio {
+// Theme Manager
+class ThemeManager {
     constructor() {
-        this.currentTheme = 'dark';
+        this.currentTheme = localStorage.getItem('theme') || 'dark';
         this.init();
     }
 
-    async init() {
-        this.setupThemeToggle();
-        this.loadThemePreference();
-        this.setupSmoothScrolling();
+    init() {
+        this.setTheme(this.currentTheme);
+        this.setupEventListeners();
     }
 
-    setupThemeToggle() {
-        const themeToggle = document.querySelector('.theme-toggle');
-        if (themeToggle) {
-            themeToggle.addEventListener('click', () => {
-                this.toggleTheme();
-            });
-        }
+    setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        this.currentTheme = theme;
+        this.updateThemeIcon();
     }
 
     toggleTheme() {
-        this.currentTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', this.currentTheme);
-        
-        // Update theme icon
-        const themeIcon = document.querySelector('.theme-toggle i');
-        if (themeIcon) {
-            themeIcon.className = this.currentTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-        }
-        
-        // Save preference
-        localStorage.setItem('portfolio-theme', this.currentTheme);
+        const newTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
+        this.setTheme(newTheme);
     }
 
-    loadThemePreference() {
-        const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
-        this.currentTheme = savedTheme;
-        document.documentElement.setAttribute('data-theme', this.currentTheme);
-        
-        // Update theme icon
-        const themeIcon = document.querySelector('.theme-toggle i');
-        if (themeIcon) {
-            themeIcon.className = this.currentTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    updateThemeIcon() {
+        const icon = document.querySelector('.theme-toggle i');
+        if (this.currentTheme === 'dark') {
+            icon.className = 'fas fa-moon';
+        } else {
+            icon.className = 'fas fa-sun';
         }
     }
 
-    setupSmoothScrolling() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+    setupEventListeners() {
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => this.toggleTheme());
+        }
     }
 }
 
-// Initialize portfolio when DOM is loaded
+// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    window.portfolio = new Portfolio();
-    window.languageManager = new LanguageManager();
+    // Initialize Theme Manager
+    const themeManager = new ThemeManager();
+    
+    // Initialize Skills Animation
+    const skillItems = document.querySelectorAll('.skill-item');
+    skillItems.forEach(skill => {
+        skill.addEventListener('mouseenter', function() {
+            const level = this.getAttribute('data-level');
+            this.style.setProperty('--skill-level', level + '%');
+        });
+    });
+    
+    // Make theme manager globally available
+    window.themeManager = themeManager;
 });
