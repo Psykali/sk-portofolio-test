@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S. Khalifa - Azure Cloud & DevOps Consultant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tech-theme.css">
+    <link rel="stylesheet" href="css/tech-globe.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Additional styles for horizontal layout */
+        .certifications-education {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        
+        .certifications, .education {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .cert-list, .edu-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .cert-list li, .edu-list li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .cert-list li:before, .edu-list li:before {
+            content: "✓";
+            color: #0078d4;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Wider experience section */
+        .experience-content {
+            max-width: 100%;
+            line-height: 1.7;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #005a9e;
+        }
+        
+        .company {
+            font-weight: 500;
+            color: #0078d4;
+        }
+        
+        .responsibilities {
+            margin-top: 15px;
+        }
+        
+        .responsibilities ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .responsibilities li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .responsibilities li:before {
+            content: "•";
+            color: #0078d4;
+            font-weight: bold;
+            position: absolute;
+            left: 10px;
+        }
+        
+        .tech-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .tech-tag {
+            background-color: #eef5ff;
+            color: #0078d4;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid #d0e3ff;
+        }
+        
+        @media (max-width: 768px) {
+            .certifications-education {
+                flex-direction: column;
+            }
+            
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="grid-lines"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="tech-nav">
+            <div class="nav-brand">
+                <div class="logo">SK</div>
+                <span class="brand-text">Cloud Portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link"><i class="fas fa-user"></i> <span data-i18n="about">About</span></a>
+                <a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> <span data-i18n="experience">Experience</span></a>
+                <a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> <span data-i18n="projects">Projects</span></a>
+                <a href="#skills" class="nav-link"><i class="fas fa-code"></i> <span data-i18n="skills">Skills</span></a>
+            </div>
+            <div class="nav-controls">
+                <div class="lang-switcher">
+                    <button id="lang-en" class="lang-btn active">EN</button>
+                    <button id="lang-fr" class="lang-btn">FR</button>
+                </div>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="tech-hero">
+            <div class="particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-text" data-i18n="hero_badge">Azure Cloud Consultant</span>
+                    </div>
+                    <h1 class="hero-name">S. KHALIFA</h1>
+                    <h2 class="hero-title" data-i18n="hero_title">DevOps Engineer & Data Science Specialist</h2>
+                    <p class="hero-description" data-i18n="hero_description">
+                        7+ years transforming cloud infrastructure with Azure, DevOps automation, and AI solutions
+                    </p>
+                    
+                    <!-- Navigation Guide -->
+                    <div class="nav-guide">
+                        <h3 data-i18n="nav_guide_title">Explore My Portfolio</h3>
+                        <div class="guide-steps">
+                            <div class="guide-step">
+                                <i class="fas fa-user-tie"></i>
+                                <span data-i18n="guide_step1">View my professional experience</span>
+                            </div>
+                            <div class="guide-step">
+                                <i class="fas fa-project-diagram"></i>
+                                <span data-i18n="guide_step2">Browse technical projects</span>
+                            </div>
+                            <div class="guide-step">
+                                <i class="fas fa-download"></i>
+                                <span data-i18n="guide_step3">Download my CV</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-contact">
+                        <a href="mailto:siefkhalefa@gmail.com" class="contact-icon" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/sief-m-khalifa" target="_blank" class="contact-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Psykali" target="_blank" class="contact-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://medium.com/@SKpsyktechdynamo" target="_blank" class="contact-icon" title="Medium">
+                            <i class="fab fa-medium"></i>
+                        </a>
+                        <a href="https://gitlab.com/your-profile" target="_blank" class="contact-icon" title="GitLab">
+                            <i class="fab fa-gitlab"></i>
+                        </a>
+                        <a href="https://kaggle.com/skhalifa01" target="_blank" class="contact-icon" title="Kaggle">
+                            <i class="fab fa-kaggle"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="solar-system">
+                        <!-- Central Sun -->
+                        <div class="sun">
+                            <div class="sun-core">SK</div>
+                            <div class="sun-glow"></div>
+                        </div>
+                        
+                        <!-- Cloud Service Orbits (Inner) -->
+                        <div class="service-orbit service-orbit-1">
+                            <div class="service-node" data-tooltip="Platform as a Service">PaaS</div>
+                        </div>
+                        <div class="service-orbit service-orbit-2">
+                            <div class="service-node" data-tooltip="Software as a Service">SaaS</div>
+                        </div>
+                        <div class="service-orbit service-orbit-3">
+                            <div class="service-node" data-tooltip="Infrastructure as a Service">IaaS</div>
+                        </div>
+                        <div class="service-orbit service-orbit-4">
+                            <div class="service-node" data-tooltip="Infrastructure as Code">IaC</div>
+                        </div>
+                
+                        <!-- All 20 Technology Planets -->
+                        <div class="orbit orbit-1">
+                            <div class="planet planet-1" data-tooltip="Azure Cloud">
+                                <div class="planet-core">Azure Cloud</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-2">
+                            <div class="planet planet-2" data-tooltip="Docker & Kubernetes">
+                                <div class="planet-core">Docker & K8s</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-3">
+                            <div class="planet planet-3" data-tooltip="Entra ID">
+                                <div class="planet-core">Entra ID</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-4">
+                            <div class="planet planet-4" data-tooltip="Python Development">
+                                <div class="planet-core">Python</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-5">
+                            <div class="planet planet-5" data-tooltip="Machine Learning">
+                                <div class="planet-core">ML</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-6">
+                            <div class="planet planet-6" data-tooltip="Linux Systems">
+                                <div class="planet-core">Linux & Windows</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-7">
+                            <div class="planet planet-7 planet-large" data-tooltip="Team Management">
+                                <div class="planet-core">Team Management</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-8">
+                            <div class="planet planet-8" data-tooltip="Database Management">
+                                <div class="planet-core">DB</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-9">
+                            <div class="planet planet-9" data-tooltip="DevSecOps">
+                                <div class="planet-core">DevSecOps</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-10">
+                            <div class="planet planet-10" data-tooltip="Financial Operations">
+                                <div class="planet-core">FinOps</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-11">
+                            <div class="planet planet-11" data-tooltip="Bash & PowerShell Scripting">
+                                <div class="planet-core">Scripting & Automation</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-12">
+                            <div class="planet planet-12" data-tooltip="AI Solutions">
+                                <div class="planet-core">AI</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-13">
+                            <div class="planet planet-13" data-tooltip="Deep Learning">
+                                <div class="planet-core">DL</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-14">
+                            <div class="planet planet-14" data-tooltip="SQL & Database Queries">
+                                <div class="planet-core">SQL & KQL</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-15">
+                            <div class="planet planet-15" data-tooltip="JSON & YAML Configuration">
+                                <div class="planet-core">JSON & YAML</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-16">
+                            <div class="planet planet-16" data-tooltip="Data Engineering">
+                                <div class="planet-core">Data Engineering</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-17">
+                            <div class="planet planet-17" data-tooltip="Data Science">
+                                <div class="planet-core">Data Science</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-18">
+                            <div class="planet planet-18" data-tooltip="Data Analysis & Engineering">
+                                <div class="planet-core">Data Analysis</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-19">
+                            <div class="planet planet-19" data-tooltip="ETL & ELT Processes">
+                                <div class="planet-core">ETL & ELT</div>
+                            </div>
+                        </div>
+                        
+                        <div class="orbit orbit-20">
+                            <div class="planet planet-20" data-tooltip="Virtualization Technologies">
+                                <div class="planet-core">Virtualization</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="tech-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about_title">About Me</h2>
+                <div class="about-content">
+                    <div class="bio-card">
+                        <p class="bio-text" data-i18n="bio_text">
+                            Experienced Azure Cloud Consultant and DevOps Engineer with 7+ years in cloud infrastructure, 
+                            automation, and data science solutions. Specialized in Azure migrations, CI/CD pipelines, 
+                            and AI integration with proven track record in cost optimization and performance improvement.
+                        </p>
+                    </div>
+                    
+                    <!-- Certifications & Education -->
+                    <div id="certifications-section" class="certifications-section">
+                        <h3 data-i18n="certifications_title">Certifications & Education</h3>
+                        <div class="certifications-education">
+                            <div class="education">
+                                <h4>Education</h4>
+                                <ul class="edu-list">
+                                    <li>2025 - Master in Data Science & AI - Le Wagon, Lyon</li>
+                                    <li>2022 - Master in Computer Science & Cloud - Simplon.Co, Lyon</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="certifications">
+                                <h4>Certifications</h4>
+                                <ul class="cert-list">
+                                    <li>AZ-900: Azure Fundamentals</li>
+                                    <li>AZ-104: Azure Administrator</li>
+                                    <li>AZ-500: Azure Security Engineer</li>
+                                    <li>AI-900: Azure AI Fundamentals</li>
+                                    <li>DP-900: Azure Data Fundamentals</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="tech-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="experience_title">Professional Experience</h2>
+                <div class="experience-content">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Azure Cloud / DevOps Consultant</div>
+                            <div class="company">Blue Soft • Empower</div>
+                        </div>
+                    </div>
+                    
+                    <div class="responsibilities">
+                        <p>Leading Azure infrastructure management, AI solutions deployment, and DevOps implementation for enterprise clients with focus on migration projects and kubernetes deployments.</p>
+                        
+                        <ul>
+                            <li>Migrated IRA to Azure DevOps using custom scripts and integration tools</li>
+                            <li>Deployed AI solutions (Prime, Azure AI, OpenAI) on kubernetes via Terraform and Azure DevOps</li>
+                            <li>Implemented Windows AVD infrastructure with multiple applications using Infrastructure as Code</li>
+                            <li>Created standardized DevOps pipelines and processes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tech-highlights">
+                        <span class="tech-tag">Azure</span>
+                        <span class="tech-tag">DevOps</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Terraform</span>
+                        <span class="tech-tag">Infrastructure as Code</span>
+                        <span class="tech-tag">AI Solutions</span>
+                        <span class="tech-tag">PowerShell</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="tech-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="skills_title">Technical Skills</h2>
+                <div id="skills-cloud"></div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="tech-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="projects_title">Featured Projects</h2>
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+                    <button class="filter-btn" data-filter="azure" data-i18n="filter_azure">Azure</button>
+                    <button class="filter-btn" data-filter="devops" data-i18n="filter_devops">DevOps</button>
+                    <button class="filter-btn" data-filter="ai" data-i18n="filter_ai">AI/ML</button>
+                    <button class="filter-btn" data-filter="data" data-i18n="filter_data">Data Science</button>
+                </div>
+                <div id="projects-grid" class="projects-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="tech-footer">
+        <div class="container">
+            <p>&copy; 2024 S. Khalifa - Azure Cloud & DevOps Consultant</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/language-manager.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cv-loader.js"></script>
+    <script src="js/projects-loader.js"></script>
+</body>
+</html>
