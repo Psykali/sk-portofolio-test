@@ -1,0 +1,51 @@
+{
+  "experiences": [
+    {
+      "id": 1,
+      "title": "Azure Cloud / DevOps Consultant",
+      "company": "Blue Soft • Empower",
+      "period": {
+        "start": "Jan-2023",
+        "end": "Present"
+      },
+      "description": "Leading Azure infrastructure management, AI solutions deployment, and DevOps implementation for enterprise clients with focus on migration projects and Kubernetes deployments.",
+      "responsibilities": [
+        "Migrated JIRA to Azure DevOps using custom scripts and integration tools",
+        "Deployed AI solutions (Prisms, Azure AI, OpenAI) on Kubernetes via Terraform and Azure DevOps",
+        "Implemented Windows AVD infrastructure with multiple applications using Infrastructure as Code",
+        "Created standardized DevOps Forge",
+        "Optimized cloud costs through resource management and right-sizing",
+        "Managed containerized applications using Docker and Kubernetes"
+      ],
+      "technologies": [
+        "Azure Cloud", "AI", "Python", "Docker", "Kubernetes", 
+        "Terraform", "Azure DevOps", "YAML", "Bash", "PowerShell", 
+        "Entra ID", "Infrastructure as Code", "CI/CD"
+      ],
+      "projectLink": "#projects"
+    },
+    {
+      "id": 2,
+      "title": "Cloud Infrastructure Engineer",
+      "company": "Tech Solutions Inc.",
+      "period": {
+        "start": "Mar-2021",
+        "end": "Dec-2022"
+      },
+      "description": "Designed and implemented cloud infrastructure solutions for various clients, focusing on scalability and security.",
+      "responsibilities": [
+        "Developed automated deployment pipelines using Azure DevOps",
+        "Implemented monitoring and alerting systems for cloud resources",
+        "Optimized cloud costs through resource management and right-sizing",
+        "Managed containerized applications using Docker and Kubernetes",
+        "Designed and implemented disaster recovery solutions",
+        "Collaborated with development teams to optimize application performance"
+      ],
+      "technologies": [
+        "Azure", "Docker", "Kubernetes", "CI/CD", "Monitoring",
+        "Cost Optimization", "Disaster Recovery", "Security", "Automation"
+      ],
+      "projectLink": "#projects"
+    }
+  ]
+}
